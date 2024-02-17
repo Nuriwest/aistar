@@ -1,0 +1,583 @@
+/* Base */
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-Bold.woff2") format("woff2"), url("../fonts/FiraSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-Regular.woff2") format("woff2"), url("../fonts/FiraSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-ExtraBold.woff2") format("woff2"), url("../fonts/FiraSans-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-SemiBold.woff2") format("woff2"), url("../fonts/FiraSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-Medium.woff2") format("woff2"), url("../fonts/FiraSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: PTSans;
+  font-display: swap;
+  src: url("../fonts/PTSans-Regular.woff2") format("woff2"), url("../fonts/PTSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html, body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #17141e;
+  caret-color: transparent;
+}
+
+input, textarea {
+  caret-color: black;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.subtitle {
+  position: relative;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 34px;
+}
+.subtitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 28px;
+  height: 2px;
+}
+
+.none {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+/* Blocks */
+.block {
+  width: 100px;
+  height: 30px;
+  background-color: red;
+}
+
+.header__top {
+  background-color: #f6f7fa;
+}
+
+.header__nav {
+  min-height: 51px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 20px;
+}
+
+.header__main {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin: 22px 27px 22px 10px;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  flex-basis: 870px;
+}
+
+.header__search-input {
+  height: 45px;
+  width: 100%;
+  padding: 15px 0px 15px 21px;
+  position: relative;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #e5e6ec;
+}
+.header__search-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #707074;
+}
+
+.header__search-btn {
+  width: 60px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e6ec;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.header__catalog {
+  margin-bottom: 19px;
+}
+
+.nav {
+  margin-left: auto;
+  margin-right: 78.5px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 24px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  padding: 10px 0;
+  transition: all 0.2s ease-in;
+}
+.nav__link:hover {
+  opacity: 0.6;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  padding: 0 8px;
+  border: 2px solid rgb(44, 40, 53);
+  border-radius: 4px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.55px;
+  transition: all 0.2s ease-in;
+}
+.login-btn:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.dropdown-menu__btn {
+  position: relative;
+  width: 274px;
+  height: 45px;
+  padding: 12px 40px 12px 60px;
+  border-radius: 15px;
+  background: linear-gradient(270deg, rgb(227, 30, 37), rgb(212, 17, 54) 100%);
+  color: #ffffff;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.dropdown-menu__btn span, .dropdown-menu__btn span::before, .dropdown-menu__btn span::after {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 18px;
+  background-color: #17141e;
+}
+.dropdown-menu__btn span {
+  left: 19px;
+  top: 24px;
+}
+.dropdown-menu__btn span::before {
+  content: "";
+  top: 6px;
+}
+.dropdown-menu__btn span::after {
+  content: "";
+  top: -6px;
+}
+
+.dropdown-menu__list {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 549px;
+  height: 490px;
+  box-shadow: 0px 5px 25px 0px rgba(51, 51, 63, 0.05);
+  background-color: #ffffff;
+}
+
+.dropdown-menu__list--active {
+  display: flex;
+}
+
+.dropdown-menu__item {
+  width: 274px;
+  border-right: 0.8px solid #e5e6ec;
+}
+
+.dropdown-menu__link {
+  display: block;
+  padding: 6px 0 6px 16px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  transition: all 0.1s ease-in;
+  position: relative;
+}
+.dropdown-menu__link:hover {
+  color: #db172e;
+  background-color: #f6f7fa;
+}
+.dropdown-menu__link:hover:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 17px;
+  width: 6px;
+  height: 10px;
+  background-image: url(../img/icons/more-link-mini.svg);
+  background-repeat: no-repeat;
+}
+
+.promo {
+  padding: 18px 0 42px;
+}
+.promo__inner {
+  display: grid;
+  grid-template-columns: 565px 570px;
+  grid-template-rows: 460px 315px;
+  gap: 20px 22px;
+}
+.promo__descr-1 {
+  position: absolute;
+  top: 65px;
+  left: 70px;
+  width: 400px;
+  color: #ffffff;
+  font-family: "Fira Sans", sans-serif;
+}
+.promo__descr-2 {
+  position: absolute;
+  top: 35px;
+  left: 27px;
+}
+
+.promo__block-1 {
+  grid-column: span 2;
+  position: relative;
+}
+
+.promo__title-1 {
+  margin-bottom: 19px;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 95%;
+  text-transform: uppercase;
+}
+
+.promo__text-1 {
+  width: 370px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.promo__block-2 {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.promo__title-2 {
+  margin-bottom: 46px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 109%;
+}
+
+.promo__text-2 {
+  width: 260px;
+  font-size: 12px;
+  line-height: 150%;
+  color: #707074;
+}
+
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-Bold.woff2") format("woff2"), url("../fonts/FiraSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-Regular.woff2") format("woff2"), url("../fonts/FiraSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-ExtraBold.woff2") format("woff2"), url("../fonts/FiraSans-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-SemiBold.woff2") format("woff2"), url("../fonts/FiraSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fira Sans;
+  font-display: swap;
+  src: url("../fonts/FiraSans-Medium.woff2") format("woff2"), url("../fonts/FiraSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: PTSans;
+  font-display: swap;
+  src: url("../fonts/PTSans-Regular.woff2") format("woff2"), url("../fonts/PTSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

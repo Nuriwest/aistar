@@ -1,0 +1,21 @@
+.nav{
+    margin-left: auto;
+    margin-right: 78.5px;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+    gap: 0 24px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.nav__link{
+    padding: 10px 0;
+    transition: all .2s ease-in;
+
+    &:hover{
+        opacity: 0.6;
+    }
+}

@@ -1,0 +1,33 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__nav">
+        <div class="block"></div>
+
+        @@include('./components/nav.html')
+
+        <button class="login-btn">Вход</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="header__main">
+      <img class="header__logo" src="./img/icons/logo.svg" alt="logo" />
+      <search class="header__search"
+        ><input
+          class="header__search-input"
+          type="search"
+          placeholder="Поиск по каталогу"
+        />
+        <button class="header__search-btn" type="submit">
+          <img src="./img/icons/search-product.svg" alt="search product" />
+        </button>
+      </search>
+    </div>
+
+    <div class="header__catalog">
+      @@include('./components/dropdown-menu.html')
+    </div>
+  </div>
+</header>

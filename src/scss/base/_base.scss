@@ -1,0 +1,48 @@
+html, body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    font-family: $fontMain;
+    font-weight: 500;
+    font-size: 14px;
+    color: $colorTextMain;
+    caret-color: transparent;
+}
+
+input, textarea{
+    caret-color: black;
+}
+
+.container{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.subtitle{
+    position: relative;
+    font-family: $fontAccent;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 34px;
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: 28px;
+        height: 2px;
+    }
+}
