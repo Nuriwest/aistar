@@ -21,9 +21,16 @@ input, textarea{
 }
 
 .container{
+    max-width: 1180px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-big{
     max-width: 1230px;
     padding: 0 15px;
     margin: 0 auto;
+    transform: translateX(25px);
 }
 
 .footer {
@@ -31,18 +38,41 @@ input, textarea{
 }
 
 .subtitle{
+    display: block;
     position: relative;
     font-family: $fontAccent;
     font-size: 28px;
     font-weight: 800;
     line-height: 34px;
 
-    &::after{
+    span{
         content: "";
         position: absolute;
         left: 0;
-        top: -1px;
+        bottom: -8px;
         width: 28px;
         height: 2px;
+        background-color: $colorTextMain;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 28px;
+        height: 1px;
+        width: calc(100% - 45px);
+        background-color: $colorWhite500;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        border: 2px solid #17141e;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        bottom: -11px;
+        right: 0;
     }
 }

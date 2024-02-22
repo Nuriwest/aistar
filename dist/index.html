@@ -4,13 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Main Page</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
   <body>
     <header class="header">
   <div class="header__top">
-    <div class="container">
+    <div class="container-big">
       <div class="header__nav">
         <div class="block"></div>
 
@@ -148,21 +152,20 @@
   </div>
 </header>
 
-
-    <main><section class="promo">
+    <main>
+      <section class="promo">
   <div class="container">
     <div class="promo__inner">
       <div class="promo__block-1">
         <img
           class="promo__img-1"
           src="./img/products/promo-1.jpg"
-          srcset="./img/products/promo-1@2x.jpg 2x"
           alt="picture"
         />
         <div class="promo__descr-1">
           <h2 class="promo__title-1">ВСЕ ДЛЯ СВОИХ</h2>
           <p class="promo__text-1">
-            Начиная от о борудования и расходных материалов, до спецодежды и
+            Начиная от оборудования и расходных материалов, до спецодежды и
             средств индивидуальной защиты.
           </p>
         </div>
@@ -193,11 +196,1040 @@
     </div>
   </div>
 </section>
-</main>
+ <section class="hits">
+  <div class="container">
+    <h2 class="subtitle">Хиты продаж<span></span></h2>
+    <div class="hits__inner">
+      <div class="tabs">
+  <button class="tabs__btn tabs__btn--active">Общее оборудование</button>
+  <button class="tabs__btn">Сварочное оборудование</button>
+  <button class="tabs__btn">Аксессуары для сварки</button>
+  <button class="tabs__btn">Газосварочное оборудование</button>
+  <button class="tabs__btn">Абразивные материалы</button>
+  <button class="tabs__btn">Одежда защитная и СИЗ</button>
+  <button class="tabs__btn">Наборы инструментов</button>
+</div>
 
-    <footer class="footer"></footer>
+      <div class="hits__product">
+        <div class="hits__product-top">
+          <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
 
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
 
+          <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+
+          <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+
+          <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+
+          <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+
+        </div>
+        <div class="hits__product-bottom">
+          <div class="hits__product-tags">
+            <button class="product-tag">Электроды сварочные</button>
+            <button class="product-tag">Проволока сварочная</button>
+            <button class="product-tag">
+              Прутки присадочные для аргонодуговой сварки
+            </button>
+            <button class="product-tag">Вольфрамовые электроды</button>
+            <button class="product-tag">Угольные электроды</button>
+            <button class="product-tag">Припой сварочный</button>
+            <button class="product-tag">Флюс сварочный</button>
+          </div>
+          <button class="hits__product-see-all">Посмотреть все</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="nova">
+  <div class="container">
+    <h2 class="subtitle">Новинки<span></span></h2>
+    <div class="nova__inner swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+</div>
+          <div class="swiper-slide"><div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+</div>
+          <div class="swiper-slide"><div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+</div>
+          <div class="swiper-slide"><div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+</div>
+          <div class="swiper-slide"><div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+</div>
+          <div class="swiper-slide"><div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0022167</span></p>
+    <img
+      src="./img/products/product-1.jpg"
+      alt="product"
+      class="product-card__img"
+    />
+    <h3 class="product-card__title">Проволока сварочная ОК</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Вес, кг: 18 <br />
+      Вид проволоки: омедненная <br />
+      Диаметр, мм: 1.2
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <span class="product-card__current-price">2190тг.</span>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="product-card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span></span></p>
+    ><img src="" alt="product" class="product-card__img" />
+    <h3 class="product-card__title"></h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr"></div>
+    <div class="product-card__status"></div>
+    <div class="product-card__buy">
+      <span class="product-card__price"></span>
+      <button class="product-card__cart-btn"><img src="" alt="cart button"></button>
+    </div>
+  </div>
+</div> -->
+</div>
+        </div>
+    </div>
+    <button class="swiper-prev-btn nova__swiper-prev-btn"><img src="./img/icons/arrow-left.svg" alt="arrow left"></button>
+    <button class="swiper-next-btn nova__swiper-next-btn"><img src="./img/icons/arrow-right.svg" alt="arrow right"></button>
+    </div>
+  </div>
+</section>
+ <section class="low-price">
+    <div class="container">
+      <h2 class="subtitle">Низкая цена<span></span></h2>
+      <div class="low-price__inner swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="product-card low-price__card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0025538</span></p>
+    <img
+      src="./img/products/product-5.jpg"
+      alt="product"
+      class="product-card__img low-price__img"
+    />
+    <span class="product-card__low-price">Низкая цена</span>
+    <h3 class="product-card__title low-price__title">Болт М8х65мм</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Длина, мм: 65 <br />
+      Размер под ключ, мм: 24 <br />
+      Резьба: М8
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <div class="product-card__prices">
+        <span class="product-card__old-price">910 тг.</span>
+        <span class="product-card__current-price">450 тг.</span>
+        <span class="product-card__kilo">/ кг</span>
+      </div>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="swiper-slide"><div class="product-card low-price__card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0025538</span></p>
+    <img
+      src="./img/products/product-5.jpg"
+      alt="product"
+      class="product-card__img low-price__img"
+    />
+    <span class="product-card__low-price">Низкая цена</span>
+    <h3 class="product-card__title low-price__title">Болт М8х65мм</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Длина, мм: 65 <br />
+      Размер под ключ, мм: 24 <br />
+      Резьба: М8
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <div class="product-card__prices">
+        <span class="product-card__old-price">910 тг.</span>
+        <span class="product-card__current-price">450 тг.</span>
+        <span class="product-card__kilo">/ кг</span>
+      </div>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="swiper-slide"><div class="product-card low-price__card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0025538</span></p>
+    <img
+      src="./img/products/product-5.jpg"
+      alt="product"
+      class="product-card__img low-price__img"
+    />
+    <span class="product-card__low-price">Низкая цена</span>
+    <h3 class="product-card__title low-price__title">Болт М8х65мм</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Длина, мм: 65 <br />
+      Размер под ключ, мм: 24 <br />
+      Резьба: М8
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <div class="product-card__prices">
+        <span class="product-card__old-price">910 тг.</span>
+        <span class="product-card__current-price">450 тг.</span>
+        <span class="product-card__kilo">/ кг</span>
+      </div>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="swiper-slide"><div class="product-card low-price__card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0025538</span></p>
+    <img
+      src="./img/products/product-5.jpg"
+      alt="product"
+      class="product-card__img low-price__img"
+    />
+    <span class="product-card__low-price">Низкая цена</span>
+    <h3 class="product-card__title low-price__title">Болт М8х65мм</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Длина, мм: 65 <br />
+      Размер под ключ, мм: 24 <br />
+      Резьба: М8
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <div class="product-card__prices">
+        <span class="product-card__old-price">910 тг.</span>
+        <span class="product-card__current-price">450 тг.</span>
+        <span class="product-card__kilo">/ кг</span>
+      </div>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="swiper-slide"><div class="product-card low-price__card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0025538</span></p>
+    <img
+      src="./img/products/product-5.jpg"
+      alt="product"
+      class="product-card__img low-price__img"
+    />
+    <span class="product-card__low-price">Низкая цена</span>
+    <h3 class="product-card__title low-price__title">Болт М8х65мм</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Длина, мм: 65 <br />
+      Размер под ключ, мм: 24 <br />
+      Резьба: М8
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <div class="product-card__prices">
+        <span class="product-card__old-price">910 тг.</span>
+        <span class="product-card__current-price">450 тг.</span>
+        <span class="product-card__kilo">/ кг</span>
+      </div>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="swiper-slide"><div class="product-card low-price__card">
+  <div class="product-card__top">
+    <p class="product-card__code">Код: <span>0025538</span></p>
+    <img
+      src="./img/products/product-5.jpg"
+      alt="product"
+      class="product-card__img low-price__img"
+    />
+    <span class="product-card__low-price">Низкая цена</span>
+    <h3 class="product-card__title low-price__title">Болт М8х65мм</h3>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__descr">
+      Длина, мм: 65 <br />
+      Размер под ключ, мм: 24 <br />
+      Резьба: М8
+    </div>
+    <div class="product-card__status">В наличии</div>
+    <div class="product-card__buy">
+      <div class="product-card__prices">
+        <span class="product-card__old-price">910 тг.</span>
+        <span class="product-card__current-price">450 тг.</span>
+        <span class="product-card__kilo">/ кг</span>
+      </div>
+      <button class="product-card__cart-btn">
+        <img src="./img/icons/add-to-cart.svg" alt="cart button" />
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+          </div>
+      </div>
+      <button class="swiper-prev-btn low-price__swiper-prev-btn"><img src="./img/icons/arrow-left.svg" alt="arrow left"></button>
+      <button class="swiper-next-btn low-price__swiper-next-btn"><img src="./img/icons/arrow-right.svg" alt="arrow right"></button>
+      </div>
+    </div>
+  </section>
+  
+      <section class="about-us">
+  <div class="container">
+    <h1 class="about-us__title">О нас</h1>
+    <div class="about-us__inner">
+      <div class="about-us__block">
+        <div class="about-us__text">
+          <p>
+            Компания - 20 лет качества, высокого сервиса и более 14 000
+            довольных клиентов.
+          </p>
+          <p>
+            В наших офисах самый широкий выбор  сварочных материалов и
+            оборудования, абразивов и спецодежды, инструмента и комплектующих.
+            Менеджеры проконсультируют вас о товарах и их наличии, помогут
+            оформить покупку и организуют быструю доставку.
+          </p>
+          <p>
+            На сайте Вы можете самостоятельно выбрать товар из каталога и
+            оформить заказ.
+          </p>
+        </div>
+        <div class="about-us__pros">
+          <div class="about-us__pro">
+            <img
+              src="../img/icons/sales.svg"
+              alt="sales icon"
+              class="about-us__pro-img"
+            />
+            <p class="about-us__pro-text about-us__pro-text--first">
+              Зарегистрируйтесь в личном кабинете и получите
+              <strong>скидку 0%</strong>
+              на всю продукцию
+              <a href="#!" class="about-us__pro-link">Зарегистрироваться</a>
+            </p>
+          </div>
+
+          <div class="about-us__pro">
+            <img
+              src="../img/icons/delivery.svg"
+              alt="delivery icon"
+              class="about-us__pro-img"
+            />
+            <p class="about-us__pro-text about-us__pro-text--second">
+              <strong
+                >Бесплатная доставка до ТК, до склада или в черте
+                города:</strong
+              >
+              Алмата, Караганда, Актобе
+            </p>
+          </div>
+
+          <div class="about-us__pro">
+            <img
+              src="../img/icons/sales.svg"
+              alt="sales icon"
+              class="about-us__pro-img"
+            />
+            <p class="about-us__pro-text">
+              <strong>Удобный</strong> личный кабинет с историей заказов
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="advantages">
+        <h2 class="subtitle">Наши преимущества<span></span></h2>
+        <div class="advantages__text">
+          <p>
+            Сохраняем минимальные цены без ущерба качеству - поставка товара
+            напрямую от производителя
+          </p>
+          <p>
+            Гибкая система скидок - выгодное приобретение товара в зависимости
+            от объема заказа
+          </p>
+          <p>
+            Широкий ассортимент продукции - склады с наличием более 5000
+            наименований товаров
+          </p>
+          <p>
+            Свой сервисный центр - предоставляем постгарантийное обслуживание
+          </p>
+        </div>
+      </div>
+
+      <div class="services">
+  <h2 class="subtitle">Услуги<span></span></h2>
+  <div class="services__inner">
+    <div class="services__block">
+      <p class="services__number">01</p>
+      <img src="./img/icons/truck.svg" alt="truck icon" class="services__img" />
+      <h3 class="services__title">Доставка</h3>
+      <div class="services__descr">
+        <p class="services__text">
+          Бесплатная доставка до ТК, склада, по городам РТ
+        </p>
+        <a href="#!" class="services__link"
+          ><img src="./img/icons/more-link.svg" alt="link arrow"
+        /></a>
+      </div>
+    </div>
+
+    <div class="services__block">
+      <p class="services__number">02</p>
+      <img
+        src="./img/icons/repair.svg"
+        alt="repair icon"
+        class="services__img"
+      />
+      <h3 class="services__title">Ремонт оборудования</h3>
+      <div class="services__descr">
+        <p class="services__text">
+          Качественный ремонт сварочного оборудования
+        </p>
+        <a href="#!" class="services__link"
+          ><img src="./img/icons/more-link.svg" alt="link arrow"
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="news">
+  <h2 class="subtitle">Новости<span></span></h2>
+  <div class="news__inner">
+    <div class="news__block">
+      <div class="news__label">Новости компании</div>
+      <div class="news__date-box">
+        <div class="news__date">
+          <span class="news__date-number">09</span>
+          <span class="news__date-time">июня 2023</span>
+        </div>
+        <div class="news__holiday">
+          <h3 class="news__holiday-title">12 июня - День Караганды</h3>
+          <p class="news__holiday-text">
+            Поздравления с праздником и график работы
+          </p>
+          <a href="#!" class="news__holiday-link"
+            ><img src="./img/icons/more-link.svg" alt="arrow icon"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news__block">
+      <div class="news__label">Новости компании</div>
+      <div class="news__date-box">
+        <div class="news__date">
+          <span class="news__date-number">26</span>
+          <span class="news__date-time">мая 2023</span>
+        </div>
+        <div class="news__holiday">
+          <h3 class="news__holiday-title">26 мая - День Сварщика !</h3>
+          <p class="news__holiday-text">Команда Сварнов поздравляет Вас !</p>
+          <a href="#!" class="news__holiday-link"
+            ><img src="./img/icons/more-link.svg" alt="arrow icon"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news__block">
+      <div class="news__label">Новости компании</div>
+      <div class="news__date-box">
+        <div class="news__date">
+          <span class="news__date-number">28</span>
+          <span class="news__date-time">апреля 2023</span>
+        </div>
+        <div class="news__holiday">
+          <h3 class="news__holiday-title">1 мая - Праздник Весны и Труда</h3>
+          <p class="news__holiday-text">Поздравления и график работы!</p>
+          <a href="#!" class="news__holiday-link"
+            ><img src="./img/icons/more-link.svg" alt="arrow icon"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="contact">
+  <div class="contact__descr">
+    <h2 class="contact__title">Приглашаем к сотрудничеству</h2>
+    <p class="contact__text">
+      Мы открыты к сотрудничеству во всех направлениях. Мы готовы подобрать
+      оборудование специально для вас
+    </p>
+  </div>
+  <form class="contact__form">
+    <div class="contact__data">
+      <div class="contact__data-name">
+        <label for="name">Ваше имя</label>
+        <input
+          id="name"
+          type="text"
+          class="contact__input-name"
+          placeholder="Иванов Иван Иванович"
+        />
+      </div>
+      <div class="contact__data-phone">
+        <label for="phone">Ваш телефон </label>
+        <input
+          id="phone"
+          type="number"
+          class="contact__input-phone"
+          placeholder="+7 (987) 060-21-03"
+        />
+      </div>
+      <div class="contact__data-mail">
+        <label for="mail">Ваш e-mail</label>
+        <input
+          id="mail"
+          type="mail"
+          class="contact__input-mail"
+          placeholder="example@mail.ru"
+        />
+      </div>
+    </div>
+    <div class="contact__message">
+      <label for="message">Ваше сообщение</label
+      ><textarea
+        id="message"
+        class="contact__textarea"
+        placeholder="Текст сообщения"
+      ></textarea>
+    </div>
+    <div class="contact__send">
+      <input
+        id="personal-data"
+        type="checkbox"
+        class="contact__send-checkbox"
+      />
+
+      <span class="contact__send-checkbox--style"></span>
+
+      <label for="personal-data" class="contact__send-label"
+        >Даю согласие ООО «Компания Сварнов» на хранение и обработку
+        <span>персональных данных</span> и соглашаюсь с условиями их
+        обработки</label
+      >
+      <button class="contact__send-btn">Отправить</button>
+    </div>
+  </form>
+</div>
+
+    </div>
+  </div>
+  <img
+    class="about-us__pseudo-bg--first"
+    src="./img/pseudo-bg.jpg"
+    alt="pseudo background"
+  />
+  <img
+    class="about-us__pseudo-bg--second"
+    src="./img/pseudo-bg-2.jpg"
+    alt="pseudo background"
+  />
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__box">
+        <p class="footer__text">О компании</p>
+        <ul class="footer__list">
+          <li><a href="#!" class="footer__link">Новости</a></li>
+          <li><a href="#!" class="footer__link">Презентации</a></li>
+          <li><a href="#!" class="footer__link">Сертификаты</a></li>
+          <li><a href="#!" class="footer__link">Контакты</a></li>
+          <li><a href="#!" class="footer__link">Как оформить заказ</a></li>
+          <li><a href="#!" class="footer__link">Вакансии</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__box">
+        <p class="footer__text">Оборудование</p>
+        <ul class="footer__list">
+          <li><a href="#!" class="footer__link">Сварочные материалы</a></li>
+          <li><a href="#!" class="footer__link">Сварочное оборудование</a></li>
+          <li>
+            <a href="#!" class="footer__link">Газосварочное оборудование</a>
+          </li>
+          <li><a href="#!" class="footer__link">Абразивы</a></li>
+          <li><a href="#!" class="footer__link">Спецодежда</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__box">
+        <p class="footer__text">Сервис</p>
+        <ul class="footer__list">
+          <li><a href="#!" class="footer__link">Доставка и оплата</a></li>
+          <li><a href="#!" class="footer__link">Гарантия и сервис</a></li>
+          <li><a href="#!" class="footer__link">Ремонт оборудования</a></li>
+          <li><a href="#!" class="footer__link">Возврат и обмен товара</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__box">
+        <p class="footer__text">Контакты</p>
+        <ul class="footer__list">
+          <li>
+            <a href="#!" class="footer__link footer__link--normal"
+              >г. Караганда, ул. Васильченко, д. 1, зд. 777</a
+            >
+          </li>
+          <li>
+            <a href="tel:+78000000000" class="footer__link"
+              >+7 (800) 000-00-00</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:online@example.ru"
+              class="footer__link footer__link--normal"
+              >online@example.ru</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

@@ -6,61 +6,47 @@ $fontFourth: "PT Sans", sans-serif;
 
 // COLORS
 $colorTextMain: #17141e;
+$footerBg: #17141e;
 $colorBlack: #000000;
 $colorWhite: #ffffff;
+$colorWhite500: #dfe2ea;
 $colorWhite600: #f6f7fa;
 $colorGray400: #e5e6ec;
+$colorGray500: #6c6975;
 $colorGray600: #707074;
-$redGradient: linear-gradient(270.00deg, rgb(227, 30, 37),rgb(212, 17, 54) 100%);
+$redGradient: linear-gradient(270deg, #e31e25 0%, #d41136 100%);
 $colorRed: #db172e;
+$colorGreen:#07a224;
 
-// @mixin retina-bg($image){
-//     @media 
-//     (-webkit-min-device-pixel-ratio: 2),
-//     (min-resolution: 192dpi) {
-//         background-image: $image;
-//     }
-// }
+// SHADOWS
+$shadowBtn: 0 5px 25px 0 rgba(51, 51, 63, 0.05);
 
-// $color-000:         #f6f9ff;
-// $color-002:         #6c6975;
-// $color-003:         #aaa9b0;
-// $color-005:         #dfe2ea;
-// $color-009:         #e9ecf1;
-// $color-010:         #e6f6e9;
-// $color-011:         #07a224;
-// $color-012:         #e31e25;
-// $color-013:         #d41136;
-// $color-015:         #ff5722cc;
-// $color-016:         #898592;
-// $color-017:         #aaa8b0;
-// $color-018:         #2c2835;
-// $color-019:         #0e385c;
-// $color-020:         #7c7c7e;
-// $color-021:         #e7e7ee;
-// $color-022:         #a2a2ae;
-// $color-023:         #ff0000;
-// $color-025:         #0000009c;
-// $color-026:         #170f49;
-// $color-027:         #171717;
-// $color-028:         #b3b6ba73;
-// $color-029:         #333333;
-// $color-030:         #707075;
-// $color-031:         #757582;
-// $color-032:         #eceef3;
-// $color-033:         #a2a2a27f;
-// $color-034:         #dfe1e8;
-// $color-035:         #707074cc;
-// $color-036:         #3d7ca3;
-// $color-037:         #2c2932;
-// $color-038:         #2b2931;
-// $color-039:         #dfdfe8;
-// $color-040:         #9d9ca2;
-// $color-041:         #efece4;
-// $color-042:         #e8e7e6;
-// $color-043:         #0000007f;
-// $color-044:         #929292;
-// $color-045:         #d9d9d9;
-// $color-046:         #00ff7f;
-// $color-047:         #f7f7f7;
-// $color-048:         #ffffff01;
+// MIXINS
+@mixin no-overflow(){
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+
+@mixin tablet (){
+    @media (max-width: 992px) {
+        @content
+    }
+};
+
+@mixin tablet-s(){
+    @media (max-width: 640px) {
+        @content
+    }
+};
+
+@mixin mobile-x(){
+    @media (max-width: 550px) {
+        @content
+    }
+};
+
+@mixin mobile(){
+    @media (max-width: 420px) {
+        @content
+    }
+}

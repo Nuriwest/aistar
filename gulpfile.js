@@ -36,6 +36,6 @@ const deployZip = gulp.series(clean, mainTasks, zip);
 export {dev};
 export {build};
 export {deployZip};
-export {images} 
+export {images};
 
 gulp.task('default', dev)

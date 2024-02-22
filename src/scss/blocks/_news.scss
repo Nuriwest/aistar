@@ -1,0 +1,74 @@
+.news__inner {
+    display: flex;
+    gap: 0 20px;
+    padding-bottom: 19px;
+    margin-top: 35px;
+}
+
+.news__block {
+    width: 370px;
+    padding: 19px 11px 21px 15px;
+
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 5px 25px 0 rgba(51, 51, 63, 0.05);
+    background: $colorWhite;
+}
+
+.news__label {
+    border-radius: 12px;
+    padding: 6px 9px 5px 10px;
+    width: 119px;
+    margin-bottom: 10px;
+    
+    background-color: $colorTextMain;
+    font-weight: 400;
+    font-size: 10px;
+    color: $colorWhite;
+}
+
+.news__date-box {
+    display: flex;
+    gap: 0 3px;
+}
+
+.news__date{
+    display: flex;
+    flex-direction: column;
+    width: 58px;
+
+    &-number{
+        display: inline-block;
+        margin-top: -10px;
+        font-family: $fontAccent;
+        font-weight: 800;
+        font-size: 48px;
+        color: #0e385c;
+    }
+
+    &-time{
+        font-size: 10px;
+        line-height: 160%;
+        color: #7c7c7e;
+    }
+}
+
+.news__holiday {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 130px;
+}
+
+.news__holiday-title {
+    font-family: $fontAccent;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 0.01em;
+}
+
+.news__holiday-text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 160%;
+}

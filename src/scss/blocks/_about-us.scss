@@ -1,0 +1,109 @@
+// ABOUT US
+.about-us {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us__pseudo-bg--first{
+    position: absolute;
+    z-index: -10;
+    top: 40px;
+    right: -30px;
+}
+
+.about-us__pseudo-bg--second{
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    bottom: 0;
+}
+
+.about-us__title {
+    font-family: $fontAccent;
+    font-weight: 800;
+    font-size: 48px;
+
+    margin-bottom: 6px;
+}
+
+.about-us__block {
+    display: flex;
+    gap: 0 40px;
+    margin-bottom: 45px;
+}
+
+.about-us__text {
+    width: 815px;
+    padding-top: 30px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+
+    & p:not(:last-child){
+        margin-bottom: 15px;
+    }
+}
+.about-us__pros {
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+}
+
+.about-us__pro {
+    display: flex;
+    gap: 0 27px;
+}
+
+.about-us__pro-img {
+    align-self: start;
+}
+
+.about-us__pro-text {
+    width: 207px;
+    line-height: 143%;
+    color: $colorBlack;
+}
+
+.about-us__pro-text--first{
+    margin-bottom: 3px;
+}
+
+.about-us__pro-text--second{
+    margin-bottom: 20px;
+}
+
+.about-us__pro-text--first, .about-us__pro-text--second{
+    padding-top: 17px;
+}
+
+.about-us__pro-link {
+    display: inline-block;
+    border: 2px solid #2c2835;
+    border-radius: 4px;
+    padding: 4px 40px;
+    margin-top: 10px;
+
+    font-family: $fontAccent;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: $colorTextMain;
+    text-transform: uppercase;
+    transition: all .2s ease-in;
+
+    &:hover{
+        color: $colorWhite;
+        background-color: $colorBlack;
+    }
+}
+
+// ADVANTAGES
+.advantages__text{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 75px;
+
+    margin: 40px 0 93px;
+    line-height: 171%;
+}

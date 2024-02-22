@@ -6,12 +6,22 @@
 @import "./base/utils";
 
 /* Blocks */
-
 @import "./blocks/header";
 @import "./components/nav";
 @import "./components/login-btn";
 @import "./components/dropdown-menu";
 @import "./blocks/promo";
+@import "./blocks/hits";
+@import "./components/tabs";
+@import "./components/product-card";
+@import "./components/product-tag";
+@import "./components/swiper-custom";
+@import "./blocks/nova";
+@import "./blocks/low-price";
+@import "./blocks/about-us";
+@import "./blocks/services";
+@import "./blocks/news";
+@import "./blocks/contact";
 @import "./blocks/footer";
 
 @font-face {
