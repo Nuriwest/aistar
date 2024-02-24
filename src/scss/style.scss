@@ -1,11 +1,11 @@
-/* Base */
+// Base
 @import "./base/reset";
 @import "./base/vars";
 @import './base/fonts';
 @import "./base/base";
 @import "./base/utils";
 
-/* Blocks */
+// Blocks
 @import "./blocks/header";
 @import "./components/nav";
 @import "./components/login-btn";
@@ -23,6 +23,7 @@
 @import "./blocks/news";
 @import "./blocks/contact";
 @import "./blocks/footer";
+@import "./blocks/registry";
 
 @font-face {
     font-family: Fira Sans;

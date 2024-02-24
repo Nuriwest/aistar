@@ -152,7 +152,7 @@
   </div>
 </header>
 
-    <main>
+    <main class="main">
       <section class="promo">
   <div class="container">
     <div class="promo__inner">
@@ -1092,59 +1092,65 @@
       оборудование специально для вас
     </p>
   </div>
-  <form class="contact__form">
+  <form action="#!" name="contactForm" class="contact__form">
     <div class="contact__data">
       <div class="contact__data-name">
-        <label for="name">Ваше имя</label>
+        <label for="contact-name">Ваше имя</label>
         <input
-          id="name"
+          id="contact-name"
           type="text"
           class="contact__input-name"
           placeholder="Иванов Иван Иванович"
+          required
         />
       </div>
       <div class="contact__data-phone">
-        <label for="phone">Ваш телефон </label>
+        <label for="contact-phone">Ваш телефон </label>
         <input
-          id="phone"
+          id="contact-phone"
           type="number"
           class="contact__input-phone"
           placeholder="+7 (987) 060-21-03"
+          required
         />
       </div>
       <div class="contact__data-mail">
-        <label for="mail">Ваш e-mail</label>
+        <label for="contact-mail">Ваш e-mail</label>
         <input
-          id="mail"
+          id="contact-mail"
           type="mail"
           class="contact__input-mail"
           placeholder="example@mail.ru"
+          required
         />
       </div>
     </div>
     <div class="contact__message">
-      <label for="message">Ваше сообщение</label
+      <label for="contact-message">Ваше сообщение</label
       ><textarea
-        id="message"
+        id="contact-message"
         class="contact__textarea"
         placeholder="Текст сообщения"
       ></textarea>
     </div>
     <div class="contact__send">
       <input
-        id="personal-data"
+        id="contact-personal-data"
         type="checkbox"
         class="contact__send-checkbox"
+        required
       />
 
       <span class="contact__send-checkbox--style"></span>
 
-      <label for="personal-data" class="contact__send-label"
+      <label for="contact-personal-data" class="contact__send-label"
         >Даю согласие ООО «Компания Сварнов» на хранение и обработку
         <span>персональных данных</span> и соглашаюсь с условиями их
         обработки</label
       >
-      <button class="contact__send-btn">Отправить</button>
+      <button type="submit" class="main-btn contact__send-btn">
+        Отправить
+      </button>
     </div>
   </form>
 </div>
@@ -1165,7 +1171,94 @@
 
     </main>
 
-    <footer class="footer">
+    <div class="registry">
+  <div class="registry__inner">
+    <h2 class="registry__title">Регистрация</h2>
+    <form action="#!" name="registryForm" class="registry__form">
+      <label for="registry-email" class="registry__label"
+        >Email
+        <input
+          id="registry-email"
+          type="email"
+          class="registry__input"
+          required
+        />
+      </label>
+      <label for="registry-phone" class="registry__label"
+        >Телефон
+        <input
+          id="registry-phone"
+          type="number"
+          onkeydown="return event.keyCode !== 69"
+          class="registry__input"
+          placeholder="+7 800 100 10 00"
+          required
+        />
+      </label>
+      <label for="registry-username" class="registry__label"
+        >ФИО
+        <input
+          id="registry-username"
+          type="text"
+          class="registry__input"
+          required
+        />
+      </label>
+      <label for="registry-password" class="registry__label"
+        >Пароль
+        <input
+          id="registry-password"
+          type="password"
+          class="registry__input registry__input-password"
+          required
+        />
+        <button class="see-password-btn">
+          <img src="./img/icons/eye.svg" alt="see passsword" />
+        </button>
+      </label>
+      <label for="registry-repeat-password" class="registry__label"
+        >Повторите пароль
+        <input
+          id="registry-repeat-password"
+          type="password"
+          class="registry__input registry__input-password"
+          required
+        />
+        <button class="see-password-btn">
+          <img src="./img/icons/eye.svg" alt="see passsword" />
+        </button>
+        <p class="conf-password__text"></p>
+      </label>
+      <label class="registry__label" for="registry-city"
+        >Город
+        <select class="registry__select-city" id="registry-city">
+          <option value="astana">Астана (Нур-Султан)</option>
+          <option value="almaty">Алматы</option>
+          <option value="aktobe">Актобе</option>
+          <option value="karaganda">Караганда</option>
+        </select>
+        <img
+          class="select-city-arrow"
+          src="./img/icons/select-city-arrow.svg"
+          alt="arrow"
+        />
+      </label>
+      <p class="registry__rules-text">
+        Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с
+        <a href="#!" class="registry__rules-link">правилами</a>
+        использования сайта
+      </p>
+      <button class="main-btn registry__btn" type="submit">
+        Зарегистрироваться
+      </button>
+      <p class="registry__signin-text">
+        Уже зарегистрированы?
+        <a href="#!" class="registry__signin-link">Войдите в личный кабинет</a>
+      </p>
+    </form>
+  </div>
+</div>
+ <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__box">

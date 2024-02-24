@@ -24,6 +24,57 @@ for (let btn of tabButtons){
     })
 }
 
+// See password
+const seePasswordBtn = document.querySelectorAll(".see-password-btn");
+
+seePasswordBtn.forEach(btn => {
+    btn.addEventListener('click', function(){
+        if (this.parentNode.querySelector(".registry__input-password").type === "password"){
+            this.parentNode.querySelector(".registry__input-password").type = "text";
+            this.classList.add('see-password-btn--active')
+        } else {
+            this.parentNode.querySelector(".registry__input-password").type = "password"
+            this.classList.remove('see-password-btn--active')
+        }
+    })
+})
+
+// Check password
+const registryBtn = document.querySelector('.registry__btn')
+const password = document.getElementById("registry-password");
+const confirmPassword = document.getElementById("registry-repeat-password");
+const confirmPasswordText = document.querySelector('.conf-password__text')
+
+registryBtn.addEventListener('click', () => {
+    if (password.value !== confirmPassword.value){
+        confirmPasswordText.textContent = "Пароли не совпадают!"
+        confirmPasswordText.classList.add("conf-password__text--false")
+    } else {
+        confirmPasswordText.textContent = ""
+        confirmPasswordText.classList.remove("conf-password__text--false")
+    }
+})
+
+// Call registry form
+const main = document.querySelector('.main')
+const registry = document.querySelector('.registry');
+const aboutRegistryBtn = document.querySelector('.about-us__pro-link');
+const aboutMainTitle = document.querySelector('.about-us__title')
+
+aboutRegistryBtn.addEventListener('click', function () {
+    window.scroll(0,199)
+    registry.classList.add("registry--active");
+    main.classList.add('none')
+})
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && registry.classList.contains("registry--active")) {
+        registry.classList.remove("registry--active");
+        main.classList.remove('none')
+        aboutMainTitle.scrollIntoView()
+    }
+})
+
 // Swiper
 const swiper = new Swiper('.nova__inner', {
     direction: 'horizontal',

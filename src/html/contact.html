@@ -6,59 +6,65 @@
       оборудование специально для вас
     </p>
   </div>
-  <form class="contact__form">
+  <form action="#!" name="contactForm" class="contact__form">
     <div class="contact__data">
       <div class="contact__data-name">
-        <label for="name">Ваше имя</label>
+        <label for="contact-name">Ваше имя</label>
         <input
-          id="name"
+          id="contact-name"
           type="text"
           class="contact__input-name"
           placeholder="Иванов Иван Иванович"
+          required
         />
       </div>
       <div class="contact__data-phone">
-        <label for="phone">Ваш телефон </label>
+        <label for="contact-phone">Ваш телефон </label>
         <input
-          id="phone"
+          id="contact-phone"
           type="number"
           class="contact__input-phone"
           placeholder="+7 (987) 060-21-03"
+          required
         />
       </div>
       <div class="contact__data-mail">
-        <label for="mail">Ваш e-mail</label>
+        <label for="contact-mail">Ваш e-mail</label>
         <input
-          id="mail"
+          id="contact-mail"
           type="mail"
           class="contact__input-mail"
           placeholder="example@mail.ru"
+          required
         />
       </div>
     </div>
     <div class="contact__message">
-      <label for="message">Ваше сообщение</label
+      <label for="contact-message">Ваше сообщение</label
       ><textarea
-        id="message"
+        id="contact-message"
         class="contact__textarea"
         placeholder="Текст сообщения"
       ></textarea>
     </div>
     <div class="contact__send">
       <input
-        id="personal-data"
+        id="contact-personal-data"
         type="checkbox"
         class="contact__send-checkbox"
+        required
       />
 
       <span class="contact__send-checkbox--style"></span>
 
-      <label for="personal-data" class="contact__send-label"
+      <label for="contact-personal-data" class="contact__send-label"
         >Даю согласие ООО «Компания Сварнов» на хранение и обработку
         <span>персональных данных</span> и соглашаюсь с условиями их
         обработки</label
       >
-      <button class="contact__send-btn">Отправить</button>
+      <button type="submit" class="main-btn contact__send-btn">
+        Отправить
+      </button>
     </div>
   </form>
 </div>
