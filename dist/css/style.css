@@ -227,6 +227,7 @@ input, textarea {
 }
 
 .main-btn {
+  padding: 15px 0;
   border-radius: 4px;
   background: linear-gradient(270deg, #e31e25 0%, #d41136 100%);
   font-family: "Fira Sans", sans-serif;
@@ -1157,7 +1158,7 @@ input, textarea {
   color: #6c6975;
 }
 
-.registry {
+.main-form {
   display: none;
   justify-content: center;
   align-items: center;
@@ -1167,14 +1168,11 @@ input, textarea {
   padding: 41px 10px 56px;
   background-color: #f6f7fa;
 }
-.registry--active {
-  display: flex;
-}
-.registry__inner {
+.main-form__inner {
   width: 400px;
 }
 
-.registry__title {
+.main-form__title {
   margin-bottom: 35px;
   font-family: "Fira Sans", sans-serif;
   font-weight: 800;
@@ -1182,21 +1180,36 @@ input, textarea {
   text-align: center;
 }
 
-.registry__form {
+.main-form__form {
   display: flex;
   flex-direction: column;
   padding: 22px 30px;
   background-color: #ffffff;
 }
 
-.registry__label {
+.main-form__label {
   position: relative;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.07em;
 }
 
-.registry__input, .registry__select-city {
+.main-form__signin-text {
+  margin-top: 35px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.main-form__signin-text .main-form__signin-link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #3d7ca3;
+}
+
+.registry--active {
+  display: flex;
+}
+
+.main-form__input, .registry__select-city {
   display: block;
   margin: 5px 0 15px;
   padding: 0 11px;
@@ -1207,7 +1220,7 @@ input, textarea {
   border-radius: 3px;
   outline: none;
 }
-.registry__input::after, .registry__select-city::after {
+.main-form__input::after, .registry__select-city::after {
   font-weight: 400;
   color: #a2a2ae;
 }
@@ -1257,27 +1270,34 @@ input, textarea {
   text-decoration-skip-ink: none;
 }
 
-.registry__btn {
-  padding: 15px 0;
-}
-
-.registry__signin-text {
-  margin-top: 35px;
-  font-weight: 400;
-  font-size: 12px;
-}
-.registry__signin-text .registry__signin-link {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #3d7ca3;
-}
-
 .conf-password__text--false {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #db172e;
   font-family: "Fira Sans", sans-serif;
   color: #db172e;
+}
+
+.login--active {
+  display: flex;
+}
+
+.login__btn {
+  width: 160px;
+}
+
+.login__signin-box {
+  display: flex;
+  align-items: center;
+  gap: 0 23px;
+}
+.login__signin-box .login__link {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
 @font-face {

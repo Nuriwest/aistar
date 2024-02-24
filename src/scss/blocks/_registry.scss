@@ -1,51 +1,8 @@
-.registry {
-    display: none;
-    justify-content: center;
-    align-items: center;
-
-    min-width: 100%;
-
-    position: relative;
-    z-index: 990;
-
-    padding: 41px 10px 56px;
-    background-color: $colorWhite600;
-
-    &--active{
-        display: flex;
-    }
-    
-    &__inner {
-        width: 400px;
-    }
-}
-
-.registry__title {
-    margin-bottom: 35px;
-
-    font-family: $fontAccent;
-    font-weight: 800;
-    font-size: 36px;
-    text-align: center;
-}
-
-.registry__form {
+.registry--active{
     display: flex;
-    flex-direction: column;
-
-    padding: 22px 30px;
-    background-color: $colorWhite;
 }
 
-.registry__label {
-    position: relative;
-
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.07em;
-}
-
-.registry__input, .registry__select-city {
+.main-form__input, .registry__select-city {
     display: block;
     margin: 5px 0 15px;
     padding: 0 11px;
@@ -111,22 +68,6 @@
     .registry__rules-link {
         text-decoration: underline;
         text-decoration-skip-ink: none;
-    }
-}
-
-.registry__btn {
-    padding: 15px 0;
-}
-
-.registry__signin-text {
-    margin-top: 35px;
-    font-weight: 400;
-    font-size: 12px;  
-    
-    .registry__signin-link {
-        text-decoration: underline;
-        text-decoration-skip-ink: none;
-        color: #3d7ca3;
     }
 }
 

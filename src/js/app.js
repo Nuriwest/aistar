@@ -75,6 +75,42 @@ document.addEventListener('keydown', function(e) {
     }
 })
 
+// Call login form
+const login = document.querySelector('.login');
+const headerLoginBtn = document.querySelector('.login-btn')
+
+headerLoginBtn.addEventListener('click', function () {
+    login.classList.add("login--active");
+    registry.classList.remove("registry--active");
+    main.classList.add('none')
+})
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && login.classList.contains("login--active")) {
+        window.scroll(0, 0)
+        login.classList.remove("login--active");
+        main.classList.remove('none')
+    }
+})
+
+// From registry to login
+const toLoginLink = document.querySelector('.registry__tologin-link');
+
+toLoginLink.addEventListener('click', function (){
+    window.scroll(0, 0)
+    login.classList.add("login--active");
+    registry.classList.remove("registry--active");
+})
+
+// From login to registry
+const toRegistryLink = document.querySelector('.login__toregistry-link');
+
+toRegistryLink.addEventListener('click', function (){
+    window.scroll(0, 0)
+    registry.classList.add("registry--active");
+    login.classList.remove("login--active");
+})
+
 // Swiper
 const swiper = new Swiper('.nova__inner', {
     direction: 'horizontal',
