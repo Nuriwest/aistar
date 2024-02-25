@@ -1,0 +1,89 @@
+<div class="main-form registry">
+  <div class="main-form__inner">
+    <h2 class="main-form__title">Регистрация</h2>
+    <form action="#!" name="registryForm" class="main-form__form">
+      <label for="registry-email" class="main-form__label"
+        >Email
+        <input
+          id="registry-email"
+          type="email"
+          class="main-form__input"
+          required
+        />
+      </label>
+      <label for="registry-phone" class="main-form__label"
+        >Телефон
+        <input
+          id="registry-phone"
+          type="number"
+          onkeydown="return event.keyCode !== 69"
+          class="main-form__input"
+          placeholder="+7 800 100 10 00"
+          required
+        />
+      </label>
+      <label for="registry-username" class="main-form__label"
+        >ФИО
+        <input
+          id="registry-username"
+          type="text"
+          class="main-form__input"
+          required
+        />
+      </label>
+      <label for="registry-password" class="main-form__label"
+        >Пароль
+        <input
+          id="registry-password"
+          type="password"
+          class="main-form__input registry__input-password"
+          required
+        />
+        <button class="see-password-btn">
+          <img src="./img/icons/eye.svg" alt="see passsword" />
+        </button>
+      </label>
+      <label for="registry-repeat-password" class="main-form__label"
+        >Повторите пароль
+        <input
+          id="registry-repeat-password"
+          type="password"
+          class="main-form__input registry__input-password"
+          required
+        />
+        <button class="see-password-btn">
+          <img src="./img/icons/eye.svg" alt="see passsword" />
+        </button>
+        <p class="conf-password__text"></p>
+      </label>
+      <label class="main-form__label" for="registry-city"
+        >Город
+        <select class="registry__select-city" id="registry-city">
+          <option value="astana">Астана (Нур-Султан)</option>
+          <option value="almaty">Алматы</option>
+          <option value="aktobe">Актобе</option>
+          <option value="karaganda">Караганда</option>
+        </select>
+        <img
+          class="select-city-arrow"
+          src="./img/icons/select-city-arrow.svg"
+          alt="arrow"
+        />
+      </label>
+      <p class="registry__rules-text">
+        Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с
+        <a href="#!" class="registry__rules-link">правилами</a>
+        использования сайта
+      </p>
+      <button class="main-btn registry__btn" type="submit">
+        Зарегистрироваться
+      </button>
+      <p class="main-form__signin-text">
+        Уже зарегистрированы?
+        <a href="#!" class="main-form__signin-link registry__tologin-link"
+          >Войдите в личный кабинет</a
+        >
+      </p>
+    </form>
+  </div>
+</div>

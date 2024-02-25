@@ -9,10 +9,6 @@ dropdownMenuBtn.addEventListener('click', function(e){
 
 dropdownMenu.onclick = (e) => e.stopPropagation()
 
-document.addEventListener('click', function(){
-    dropdownMenu.classList.remove('dropdown-menu__list--active')
-})
-
 // Default product category
 const tabButtons = document.querySelectorAll('.tabs__btn');
 
@@ -111,6 +107,27 @@ toRegistryLink.addEventListener('click', function (){
     login.classList.remove("login--active");
 })
 
+// Card modal window
+const productCard = document.querySelectorAll('.product-card');
+const modalCard = document.querySelector('.modal-card');
+const modalCardInner = document.querySelector('.modal-card__inner')
+const cardCloseBtn = document.querySelector('.modal-card__close-btn')
+
+productCard.forEach(card => {
+    card.addEventListener('click', function(e){
+        modalCard.classList.add('modal-card--active')
+        e.stopPropagation()
+
+        document.body.classList.add('black-bg')
+    })
+})
+
+modalCardInner.onclick = (e) => e.stopPropagation()
+
+cardCloseBtn.addEventListener('click', function(e){
+    modalCard.classList.remove('modal-card--active')
+})
+
 // Swiper
 const swiper = new Swiper('.nova__inner', {
     direction: 'horizontal',
@@ -135,3 +152,9 @@ const swiper2 = new Swiper('.low-price__inner', {
       prevEl: '.low-price__swiper-prev-btn',
     },
 });
+
+// Document
+document.addEventListener('click', function(){
+    dropdownMenu.classList.remove('dropdown-menu__list--active');
+    modalCard.classList.remove('modal-card--active');
+})
