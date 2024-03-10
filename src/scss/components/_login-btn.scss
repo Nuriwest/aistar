@@ -22,4 +22,8 @@
         color: $colorWhite;
         background-color: $colorBlack;
     }
+
+    @include tablet-s(){
+        display: none;
+    }
 }

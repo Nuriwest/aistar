@@ -1,3 +1,42 @@
+// Scripts for document at the bottom of file!
+
+// Prevent typing alphabetic characters in a number input on Firefox browser
+const numberInputs = document.querySelectorAll('input[type="number"]');
+
+numberInputs.forEach(input => {
+    input.addEventListener('keypress', function(e) {
+        if (e.keyCode != 46 && e.keyCode > 31 && (e.keyCode < 48 || e.keyCode > 57)) {
+            e.preventDefault()
+        }
+    })
+})
+
+// Correct width of select-city according text length
+const selectCity = document.querySelector('#select-city-menu')
+
+let longestOptionWidth;
+
+selectCity.addEventListener('change', function() {
+    longestOptionWidth = selectCity.value.length
+
+    selectCity.style.width = (longestOptionWidth * 8) + 'px'
+})
+
+// Change search's placeholder
+const headerSearchInput = document.querySelector('.header__search-input')
+const breakpointForInput = 640;
+
+if(window.innerWidth <= breakpointForInput) {
+    headerSearchInput.placeholder = "Поиск по сайту"
+};
+
+// Focus on search input when clicking search button
+const headerSearchBtn = document.querySelector('.header__search-btn')
+
+headerSearchBtn.onclick = function(){
+    headerSearchInput.focus()
+}
+
 // Dropdown Menu
 const dropdownMenu = document.querySelector('.dropdown-menu__list');
 const dropdownMenuBtn = document.querySelector('.dropdown-menu__btn');
@@ -9,7 +48,7 @@ dropdownMenuBtn.addEventListener('click', function(e){
 
 dropdownMenu.onclick = (e) => e.stopPropagation()
 
-// Default product category
+// Product category switcher
 const tabButtons = document.querySelectorAll('.tabs__btn');
 
 for (let btn of tabButtons){
@@ -17,6 +56,57 @@ for (let btn of tabButtons){
 
         tabButtons.forEach((el) => el.classList.remove('tabs__btn--active'));
         this.classList.add('tabs__btn--active');
+    })
+}
+
+// Add the checkmark of custom checkbox
+const customCheckbox = document.querySelector('.contact__checkbox-custom')
+const customCheckboxCheckmark = document.querySelector('.contact__checkbox-checkmark')
+const customCheckboxLabel = document.querySelector('.contact__send-label')
+
+customCheckboxLabel.onclick = function(){
+    customCheckboxCheckmark.classList.toggle('none')
+}
+
+customCheckbox.onclick = function(){
+    customCheckboxCheckmark.classList.toggle('none')
+}
+
+// Create mini nav component 
+const miniNav = document.querySelector('.mini-nav')
+
+if(window.innerWidth <= breakpointForInput) {
+    miniNav.style.display = "flex"
+};
+
+// Create footer accordeon 
+const footerAccIcon = document.querySelectorAll('.footer__acc-icon')
+const footerAccBtn = document.querySelectorAll('.footer__acc-btn')
+const footerList = document.querySelectorAll('.footer__list')
+const accordeonBreakpoint = 470
+
+if (window.innerWidth <= accordeonBreakpoint){
+    footerAccIcon.forEach(icon => {
+        icon.style.display = "block"
+    })
+
+    footerAccBtn.forEach(btn => {
+
+        btn.addEventListener('click', function(){
+            
+            footerList.forEach(list => {
+                list.classList.remove('footer__list--active')
+            })
+
+            footerAccIcon.forEach(icon => {
+                icon.classList.remove('footer__acc-icon--rotate')
+            })
+
+            this.querySelector('.footer__acc-icon').classList.toggle('footer__acc-icon--rotate')
+            this.closest('.footer__box').querySelector('.footer__list').classList.toggle('footer__list--active')
+
+        })
+        
     })
 }
 
@@ -43,10 +133,10 @@ const confirmPasswordText = document.querySelector('.conf-password__text')
 
 registryBtn.addEventListener('click', () => {
     if (password.value !== confirmPassword.value){
-        confirmPasswordText.textContent = "Пароли не совпадают!"
+        confirmPasswordText.innerText = "Пароли не совпадают!"
         confirmPasswordText.classList.add("conf-password__text--false")
     } else {
-        confirmPasswordText.textContent = ""
+        confirmPasswordText.innerText = ""
         confirmPasswordText.classList.remove("conf-password__text--false")
     }
 })
@@ -57,11 +147,13 @@ const registry = document.querySelector('.registry');
 const aboutRegistryBtn = document.querySelector('.about-us__pro-link');
 const aboutMainTitle = document.querySelector('.about-us__title')
 
-aboutRegistryBtn.addEventListener('click', function () {
-    window.scroll(0,199)
-    registry.classList.add("registry--active");
-    main.classList.add('none')
-})
+if(aboutRegistryBtn){
+    aboutRegistryBtn.addEventListener('click', function () {
+        window.scroll(0,199)
+        registry.classList.add("registry--active");
+        main.classList.add('none')
+    })
+}
 
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && registry.classList.contains("registry--active")) {
@@ -128,16 +220,355 @@ cardCloseBtn.addEventListener('click', function(e){
     modalCard.classList.remove('modal-card--active')
 })
 
+// Modal window image switcher
+const modalSwitcherImg = document.querySelector('.modal-card__img')
+const modalImgSwitcher1 = document.querySelector('#modal-img-switcher-1')
+const modalImgSwitcher2 = document.querySelector('#modal-img-switcher-2')
+
+modalImgSwitcher1.onclick = function() {
+    modalSwitcherImg.src = './img/descr-products/descr-product-1.jpg'
+    this.classList.add('modal-card__img-btn--active')
+    modalImgSwitcher2.classList.remove('modal-card__img-btn--active')
+}
+
+modalImgSwitcher2.onclick = function() {
+    modalSwitcherImg.src = './img/products/product-1.jpg'
+    this.classList.add('modal-card__img-btn--active')
+    modalImgSwitcher1.classList.remove('modal-card__img-btn--active')
+}
+
+// Descr page image switcher
+const descrSwitcherImg = document.querySelector('.descr-item__img')
+const descrImgSwitcher1 = document.querySelector('#descr-img-switcher-1')
+const descrImgSwitcher2 = document.querySelector('#descr-img-switcher-2')
+
+descrImgSwitcher1.onclick = function() {
+    descrSwitcherImg.src = './img/descr-products/descr-product-1.jpg'
+    this.classList.add('descr-item__img-btn--active')
+    descrImgSwitcher2.classList.remove('descr-item__img-btn--active')
+}
+
+descrImgSwitcher2.onclick = function() {
+    descrSwitcherImg.src = './img/products/product-1.jpg'
+    this.classList.add('descr-item__img-btn--active')
+    descrImgSwitcher1.classList.remove('descr-item__img-btn--active')
+}
+
+// Total price counter
+const descrMinusBtn = document.querySelector('.descr-item__minus')
+const descrPlusBtn = document.querySelector('.descr-item__plus')
+const descrProdQuant = document.querySelector('.descr-item__prod-quant')
+const descrTotalPrice = document.querySelector('#descr-total-price')
+
+let descrTotalP = descrTotalPrice.innerText.replace(/\s/g, '');
+
+descrMinusBtn.addEventListener('click', function(){
+    if(descrProdQuant.innerText > 1) {
+        descrProdQuant.innerText--
+
+        let totalPrice = calcTotalPrice(descrTotalP, descrProdQuant.innerText)
+
+        descrTotalPrice.innerText = totalPrice.toLocaleString()
+    } 
+
+    if(descrProdQuant.innerText == 1){
+        descrMinusBtn.classList.add('disabled-btn')
+    }
+})
+
+descrPlusBtn.addEventListener('click', function(){
+    descrProdQuant.innerText++
+
+    if(descrProdQuant.innerText != 1){
+        descrMinusBtn.classList.remove('disabled-btn')
+    }
+
+    let totalPrice = calcTotalPrice(descrTotalP, descrProdQuant.innerText)
+
+    descrTotalPrice.innerText = totalPrice.toLocaleString()
+})
+
+function calcTotalPrice(price, quantity){
+    return parseInt(price) * parseInt(quantity);    
+}
+
+// Product info switcher
+const descrTabBtns = document.querySelectorAll('.descr-tabs__btn');
+
+for (let btn of descrTabBtns){
+    btn.addEventListener('click', function () {
+        descrTabBtns.forEach((el) => el.classList.remove('descr-tabs__btn--active'));
+        this.classList.add('descr-tabs__btn--active');
+    })
+}
+
+// Mobile burger menu for descr-tabs
+const descrTab = document.querySelector('.descr-tabs')
+const mobileInfoSwitcher = document.querySelector('.descr-info__switcher-btn')
+
+if (window.innerWidth <= 710){
+    descrTab.classList.add('none')
+}
+
+mobileInfoSwitcher.addEventListener('click', function(){
+    descrTab.classList.toggle('none')
+    descrTab.classList.toggle('descr-tabs--flex') 
+})
+
+// Select active info tab for mobile devices
+const mobileInfoActiveTab = document.querySelector('.descr-info__switcher-text')
+
+for (let btn of descrTabBtns){
+    btn.addEventListener('click', function () {
+        if (window.innerWidth <= 710){
+            descrTab.classList.add('none')
+            mobileInfoActiveTab.textContent = this.textContent
+        }
+    })
+}
+
+// Init slider for last viewed section with Mutation Observer
+const lastViewedSwiper = document.querySelector('.last-viewed__swiper')
+const lastViewedWrapper = document.querySelector('.last-viewed__swiper-wrapper')
+const lastViewedSlide = document.querySelectorAll('.last-viewed__slide')
+
+const lastViewedObserver = new MutationObserver(lvcallback)
+
+function lvcallback(mutations) {
+    if (lastViewedSlide.length > 4) {
+        lastViewedWrapper.style.justifyContent = 'flex-start'
+    }
+
+    if (lastViewedSlide.length == 2 && window.innerWidth <= 710) {
+        lastViewedWrapper.style.justifyContent = 'flex-start'
+    } 
+
+    if (lastViewedSlide.length == 3 && window.innerWidth <= 1000) {
+        lastViewedWrapper.style.justifyContent = 'flex-start'
+    } 
+
+    if (lastViewedSlide.length == 4 && window.innerWidth <= 1240) {
+        lastViewedWrapper.style.justifyContent = 'flex-start'
+    } 
+}
+
+lastViewedObserver.observe(lastViewedSwiper, {
+    childList: true,
+    characterData: true,
+    subtree: true,
+})
+
+// Cart total sum
+const cartList = document.querySelector('.cart__list')
+const cartCounterMinus = document.querySelectorAll('.cart__item-minus')
+const cartCounterPlus = document.querySelectorAll('.cart__item-plus')
+const cartTotalPrice = document.querySelector('.cart__total-price')
+let cartItemTotalP = [...document.querySelectorAll('.cart__item-sum')]
+
+const cartObserver = new MutationObserver(cartCallback)
+
+function cartCallback(mutations) {
+    cartItemTotalP = [...document.querySelectorAll('.cart__item-sum')]
+}
+
+cartObserver.observe(cartList, {
+    childList: true,
+    characterData: true,
+    subtree: true,
+})
+
+function sumCartTotal (arr){
+    cartTotalPrice.innerText = arr.reduce((acc, el) => {
+        return acc += +el.innerText
+    }, 0)
+}
+
+sumCartTotal(cartItemTotalP)
+
+cartCounterMinus.forEach(btn => {
+    let cartItemQuant = btn.closest('.cart__item').querySelector('.cart__item-quant')
+    let cartItemPrice = btn.closest('.cart__item').querySelector('.cart__item-price')
+    let cartItemSum = btn.closest('.cart__item').querySelector('.cart__item-sum')
+
+    if(cartItemQuant.innerText == 1){
+        btn.classList.add('disabled-btn')
+    }
+
+    btn.addEventListener('click', function(){
+        if(cartItemQuant.innerText > 1) {
+            cartItemQuant.innerText--
+        
+            let totalPrice = calcTotalPrice(cartItemPrice.innerText, cartItemQuant.innerText)
+        
+            cartItemSum.innerText = totalPrice
+
+            sumCartTotal(cartItemTotalP)
+        } 
+
+        if(cartItemQuant.innerText == 1){
+            btn.classList.add('disabled-btn')
+        }
+    })
+})
+
+cartCounterPlus.forEach(btn => {
+    let cartItemQuant = btn.closest('.cart__item').querySelector('.cart__item-quant')
+    let cartItemPrice = btn.closest('.cart__item').querySelector('.cart__item-price')
+    let cartItemSum = btn.closest('.cart__item').querySelector('.cart__item-sum')
+
+    btn.addEventListener('click', function(){
+        cartItemQuant.innerText++
+
+        if(cartItemQuant.innerText != 1){
+            btn.closest('.cart__item').querySelector('.cart__item-minus').classList.remove('disabled-btn')
+        }
+        
+        let totalPrice = calcTotalPrice(cartItemPrice.innerText, cartItemQuant.innerText)
+        
+        cartItemSum.innerText = totalPrice;
+
+        sumCartTotal(cartItemTotalP)
+    })
+})
+
+// Remove cart item
+const removeCartItem = document.querySelectorAll('.cart__item-btn');
+
+removeCartItem.forEach(btn => {
+    btn.addEventListener('click', function(e){
+        e.target.closest('.cart__item').remove();
+
+        let cartItemTotalP = [...document.querySelectorAll('.cart__item-sum')]
+        sumCartTotal(cartItemTotalP)
+    })
+})
+
+// Sort btn switcher
+const sortBtns = document.querySelectorAll('.filter__sorting-btn')
+const sortPrice = document.querySelector('#sort-price')
+
+sortBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        sortBtns.forEach((el) => el.classList.remove('filter__sorting-btn--active'))
+        this.classList.add('filter__sorting-btn--active')
+    })
+})
+
+sortPrice.addEventListener('click', function() {
+    sortPrice.classList.toggle('sort-by-lower')
+})
+
+// Double range sliders
+const minGap = 0;
+
+function stopThumbOne(sliderOne, sliderTwo) {
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    }
+}
+
+function stopThumbTwo(sliderOne, sliderTwo) {
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    }
+}
+
+// Double range price slider
+const priceSliderOne = document.querySelector("#price-slider-1");
+const priceSliderTwo = document.querySelector("#price-slider-2");
+const priceDisplayValOne = document.querySelector("#price-value-from");
+const priceDisplayValTwo = document.querySelector("#price-value-to");
+
+function slidePriceOne(){
+    stopThumbOne(priceSliderOne, priceSliderTwo)
+
+    priceDisplayValOne.textContent = priceSliderOne.value;
+}
+
+function slidePriceTwo(){
+    stopThumbTwo(priceSliderOne, priceSliderTwo)
+
+    priceDisplayValTwo.textContent = priceSliderTwo.value;
+}
+
+priceSliderOne.addEventListener('input', function() {
+    return slidePriceOne()
+})
+
+priceSliderTwo.addEventListener('input', function() {
+    return slidePriceTwo()
+})
+
+// Double range amperage slider
+const amperageSliderOne = document.querySelector("#amperage-slider-1");
+const amperageSliderTwo = document.querySelector("#amperage-slider-2");
+const amperageDisplayValOne = document.querySelector("#amperage-value-from");
+const amperageDisplayValTwo = document.querySelector("#amperage-value-to");
+
+function slideAmperageOne(){
+    stopThumbOne(amperageSliderOne, amperageSliderTwo)
+
+    amperageDisplayValOne.textContent = amperageSliderOne.value;
+}
+
+function slideAmperageTwo(){
+    stopThumbTwo(amperageSliderOne, amperageSliderTwo)
+
+    amperageDisplayValTwo.textContent = amperageSliderTwo.value;
+}
+
+amperageSliderOne.addEventListener('input', function() {
+    return slideAmperageOne()
+})
+
+amperageSliderTwo.addEventListener('input', function() {
+    return slideAmperageTwo()
+})
+
+// Reset form button
+const filterResetBtn = document.querySelector('.filter__reset-btn')
+
+filterResetBtn.addEventListener('click', function(){
+    priceDisplayValOne.textContent = priceSliderOne.min
+    priceDisplayValTwo.textContent = priceSliderTwo.max
+
+    amperageDisplayValOne.textContent = amperageSliderOne.min
+    amperageDisplayValTwo.textContent = amperageSliderTwo.max
+})
+
 // Swiper
 const swiper = new Swiper('.nova__inner', {
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 4,
-    spaceBetween: 40,
   
     navigation: {
       nextEl: '.nova__swiper-next-btn',
       prevEl: '.nova__swiper-prev-btn',
+    },
+
+    pagination: {
+        el: ".nova__pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        280: {
+            slidesPerView: 1,
+        },
+
+        670: {
+            slidesPerView: 2,
+        },
+
+        1000: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+
+        1240: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        }
     },
 });
 
@@ -151,7 +582,150 @@ const swiper2 = new Swiper('.low-price__inner', {
       nextEl: '.low-price__swiper-next-btn',
       prevEl: '.low-price__swiper-prev-btn',
     },
+
+    pagination: {
+        el: ".low-price__pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        280: {
+            slidesPerView: 1,
+        },
+
+        730: {
+            slidesPerView: 2,
+        },
+
+        1000: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+
+        1240: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        }
+    },
 });
+
+const swiper3 = new Swiper('.descr__swiper', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+  
+    navigation: {
+      nextEl: '.descr__swiper-next-btn',
+      prevEl: '.descr__swiper-prev-btn',
+    },
+
+    pagination: {
+        el: ".descr__pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        280: {
+            slidesPerView: 1,
+        },
+
+        730: {
+            slidesPerView: 2,
+        },
+
+        1000: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+        },
+
+        1240: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        }
+    },
+});
+
+const swiper4 = new Swiper('.last-viewed__swiper', {
+    direction: 'horizontal',
+    slidesPerView: 4,
+
+    pagination: {
+        el: ".last-viewed__pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        280: {
+            slidesPerView: 1,
+        },
+
+        710: {
+            slidesPerView: 2,
+        },
+
+        1000: {
+            slidesPerView: 3,
+        },
+
+        1240: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        }
+    },
+})
+
+// Mobile swiper for hits
+const breakpointForSlider = 640;
+const hitsProductRender = document.querySelector('.hits__product-top');
+const hitsProductWrapper = document.querySelector('.hits__product-wrapper')
+const hitsProductSlide = hitsProductWrapper.querySelectorAll('.hits__product-slide')
+
+if (window.innerWidth <= breakpointForSlider) {
+    hitsProductRender.classList.add('swiper')
+    hitsProductWrapper.classList.add('swiper-wrapper')
+
+    hitsProductSlide.forEach(slide => {
+        slide.classList.add('swiper-slide')
+    })
+
+    const swiper5 = new Swiper(".hits__product-top", {
+        direction: 'horizontal',
+        slidesPerView: 1,
+
+        pagination: {
+            el: ".hits__product-pagination ",
+            clickable: true,
+          },
+    })
+}
+
+// Mobile swiper for promo
+const breakpointForPromo = 900;
+const promoSwiper = document.querySelector('.promo__inner');
+const promoSwiperWrapper = document.querySelector('.promo__swiper-wrapper')
+const promoSwiperSlide = promoSwiperWrapper.querySelectorAll('.promo__block')
+
+if (window.innerWidth <= breakpointForPromo) {
+    promoSwiper.classList.add('swiper')
+    promoSwiperWrapper.classList.add('swiper-wrapper')
+
+    promoSwiperSlide.forEach(slide => {
+        slide.classList.add('swiper-slide')
+    })
+
+    const swiper6 = new Swiper(".promo__inner", {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        centeredSlides: true,
+
+        pagination: {
+            el: ".promo__swiper-pagination",
+            clickable: true,
+        },
+    })
+}
+
 
 // Document
 document.addEventListener('click', function(){

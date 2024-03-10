@@ -5,40 +5,49 @@
 }
 
 .services__block {
-width: 243px;
+    width: 243px;
 }
 
 .services__number {
-text-align: right;
-font-family: $fontAccent;
+    text-align: right;
+    font-family: $fontAccent;
 font-weight: 800;
-font-size: 24px;
-color: #e7e7ee;
+    font-size: 24px;
+    color: #e7e7ee;
 }
 
 .services__img {
-display: block;
-margin: 15px auto;
+    display: block;
+    margin: 15px auto;
+
+    @include tablet(){
+        margin: 0 auto;
+    }
+
+    @include width830(){
+        width: 111px;
+        height: 100px;
+    }
 }
 
 .services__title {
-margin-bottom: 5px;
-font-family: $fontAccent;
-font-weight: 800;
-font-size: 16px;
-letter-spacing: 0.01em;
-text-transform: uppercase;
+    margin-bottom: 5px;
+    font-family: $fontAccent;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
 
 .services__descr {
-display: flex;
-align-items: flex-end;
-gap: 0 9.5px;
-padding-right: 12px;
+    display: flex;
+    align-items: flex-end;
+    gap: 0 9.5px;
+    padding-right: 12px;
 }
 
 .services__text {
-font-weight: 400;
-font-size: 10px;
-line-height: 160%;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 160%;
 }

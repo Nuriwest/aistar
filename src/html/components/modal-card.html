@@ -5,17 +5,34 @@
     </button>
     <p class="modal-card__code">Код товара: <span>0022167</span></p>
     <h3 class="modal-card__title">Электрический монтажный пистолет</h3>
+
     <div class="modal-card__resources">
-      <div class="modal-card__img">
-        <img src="./img/products/modal-product-1.jpg" alt="product image" />
+      <div class="modal-card__img-slider">
+        <img
+          class="modal-card__img"
+          src="./img/modal-products/modal-product-1.jpg"
+          alt="product image"
+        />
+        <div class="modal-card__img-switcher">
+          <button
+            id="modal-img-switcher-1"
+            class="modal-card__img-btn modal-card__img-btn--active"
+          >
+            <img
+              src="../../img/descr-products/descr-product-1.jpg"
+              alt="image switcher"
+            />
+          </button>
+          <button id="modal-img-switcher-2" class="modal-card__img-btn">
+            <img
+              src="../../img/descr-products/descr-product-1.jpg"
+              alt="image switcher"
+            />
+          </button>
+        </div>
       </div>
       <iframe
-        style="
-          padding: 16px 14px;
-          background-color: #ffffff;
-          border-radius: 3px;
-          box-shadow: 0 5px 25px 0 rgba(51, 51, 63, 0.05);
-        "
+        class="modal-card__iframe"
         width="456"
         height="342"
         src="https://www.youtube.com/embed/ODqA_zmGHOw?si=e7aR4CG0fiws6zr-"
@@ -25,7 +42,9 @@
         allowfullscreen
       ></iframe>
     </div>
+
     <div class="modal-card__descr">
+      <h3 class="modal-card__descr-title">Описание и характеристики</h3>
       <ul class="modal-card__property-list">
         <li class="modal-card__property-item">
           <span class="modal-card__property-title">Бренд</span>
@@ -53,49 +72,7 @@
         газового монтажного пистолета можно не только забивать «зонтики» при
         монтаже утеплителя, но и эффективно забивать дюбель по бетону.
       </p>
-      <a href="#!" class="modal-card__link">Подробнее</a>
+      <a href="./descr.html" class="modal-card__link">Подробнее</a>
     </div>
   </div>
 </div>
-
-<!-- <div class="modal-card">
-    <div class="modal-card__inner">
-      <button class="modal-card__close-btn">
-        <img src="./img/icons/close.svg" alt="close icon" />
-      </button>
-      <p class="modal-card__code">Код товара: <span> </span></p>
-      <h3 class="modal-card__title"> </h3>
-      <div class="modal-card__resources">
-        <img
-          src="./img/products/product-4.jpg"
-          alt="product image"
-          class="modal-card__img"
-        />
-        <iframe src="" frameborder="0" class="modal-card__video"> </iframe>
-      </div>
-      <div class="modal-card__descr">
-
-        <ul class="modal-card__property-list">
-        <li class="modal-card__property-item">
-          <span class="modal-card__property-title"> </span>
-          <span class="modal-card__property-text"> </span>
-        </li>
-        <li class="modal-card__property-item">
-          <span class="modal-card__property-title"> </span>
-          <span class="modal-card__property-text"> </span>
-        </li>
-        <li class="modal-card__property-item">
-          <span class="modal-card__property-title"> </span>
-          <span class="modal-card__property-text"> </span>
-        </li>
-        <li class="modal-card__property-item">
-          <span class="modal-card__property-title"> </span>
-          <span class="modal-card__property-text"> </span>
-        </li>
-        </ul>
-
-        <p class="modal-card__text"></p>
-        <a href="#!" class="modal-card__link">Подробнее</a>
-      </div>
-    </div>
-  </div>   -->

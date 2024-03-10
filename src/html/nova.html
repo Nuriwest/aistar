@@ -1,18 +1,38 @@
 <section class="nova">
-  <div class="container">
-    <h2 class="subtitle">Новинки<span></span></h2>
-    <div class="nova__inner swiper">
+  <div class="outer-box">
+    <div class="container">
+      <h2 class="subtitle">Новинки<span></span></h2>
+      <div class="nova__inner swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">@@include('./components/product-card.html')</div>
-          <div class="swiper-slide">@@include('./components/product-card.html')</div>
-          <div class="swiper-slide">@@include('./components/product-card.html')</div>
-          <div class="swiper-slide">@@include('./components/product-card.html')</div>
-          <div class="swiper-slide">@@include('./components/product-card.html')</div>
-          <div class="swiper-slide">@@include('./components/product-card.html')</div>
+          <div class="swiper-slide">
+            @@include('./components/product-card.html')
+          </div>
+          <div class="swiper-slide">
+            @@include('./components/product-card.html')
+          </div>
+          <div class="swiper-slide">
+            @@include('./components/product-card.html')
+          </div>
+          <div class="swiper-slide">
+            @@include('./components/product-card.html')
+          </div>
+          <div class="swiper-slide">
+            @@include('./components/product-card.html')
+          </div>
+          <div class="swiper-slide">
+            @@include('./components/product-card.html')
+          </div>
         </div>
-    </div>
-    <button class="swiper-prev-btn nova__swiper-prev-btn"><img src="./img/icons/arrow-left.svg" alt="arrow left"></button>
-    <button class="swiper-next-btn nova__swiper-next-btn"><img src="./img/icons/arrow-right.svg" alt="arrow right"></button>
+
+        <div class="nova__pagination swiper-pagination"></div>
+      </div>
+
+      <button class="swiper-prev-btn nova__swiper-prev-btn">
+        <img src="./img/icons/arrow-left.svg" alt="arrow left" />
+      </button>
+      <button class="swiper-next-btn nova__swiper-next-btn">
+        <img src="./img/icons/arrow-right.svg" alt="arrow right" />
+      </button>
     </div>
   </div>
 </section>

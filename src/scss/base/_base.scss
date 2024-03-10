@@ -14,6 +14,45 @@ body {
     font-size: 14px;
     color: $colorTextMain;
     caret-color: transparent;
+
+    @include tablet-s(){
+        background-color: $colorWhite600;
+    }
+
+    .main-link{
+        display: inline-block;
+        position: relative;
+        padding-right: 21px;
+    
+        font-size: 10px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: $colorBlue;
+
+        transition: all .2s ease-in;
+    
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+    
+            width: 15px;
+            height: 7px;
+    
+            background-image: url(../img/icons/blue-arrow.svg);
+            background-repeat: no-repeat;
+        }
+
+        &:hover{
+            padding-right: 17px;
+        }
+    }
+}
+
+img{
+    object-fit: cover;
 }
 
 input, textarea{
@@ -24,6 +63,10 @@ input, textarea{
     max-width: 1180px;
     padding: 0 15px;
     margin: 0 auto;
+
+    @include width470(){
+        padding: 0 10px;
+    }
 }
 
 .container-big{
@@ -31,6 +74,11 @@ input, textarea{
     padding: 0 15px;
     margin: 0 auto;
     transform: translateX(25px);
+
+    @include width1310(){
+        transform: translateX(0);
+        padding: 0 10px;
+    }
 }
 
 .footer {
@@ -54,6 +102,15 @@ input, textarea{
     &:hover{
         opacity: 0.8;
     }
+
+    @include tablet(){
+        padding: 10px 0;
+        font-size: 13px;
+    }
+}
+
+.disabled-btn{
+    opacity: 0.4;
 }
 
 .subtitle{
@@ -64,6 +121,10 @@ input, textarea{
     font-weight: 800;
     line-height: 34px;
 
+    @include tablet-s(){
+        font-size: 28px;
+    }
+
     span{
         content: "";
         position: absolute;
@@ -72,6 +133,10 @@ input, textarea{
         width: 28px;
         height: 2px;
         background-color: $colorTextMain;
+
+        @include mobile(){
+            bottom: -3px;
+        }
     }
 
     &::before{
@@ -82,6 +147,10 @@ input, textarea{
         height: 1px;
         width: calc(100% - 45px);
         background-color: $colorWhite500;
+
+        @include mobile(){
+            bottom: -3px;
+        }
     }
 
     &::after{
@@ -93,5 +162,47 @@ input, textarea{
         height: 8px;
         bottom: -11px;
         right: 0;
+
+        @include mobile(){
+            bottom: -6px;
+        }
+    }
+}
+
+.mini-subtitle{
+    position: relative;
+
+    font-family: $fontAccent;
+    font-weight: 800;
+    font-size: 18px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: -10px;
+        width: 28px;
+        height: 2px;
+        background-color: $colorTextMain;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0px;
+
+        height: 1px;
+        width: 100%;
+        background-color: $colorWhite500;
+    }
+
+    @include tablet(){
+        font-size: 21px;
+    } 
+
+    @include mobile-x(){
+        font-size: 18px;    
     }
 }

@@ -18,6 +18,11 @@
         font-weight: 400;
         color: #a2a2ae;
     }
+
+    @include mobile-x(){
+        height: 37px;
+        margin-bottom: 7px;
+    }
 }
 
 .registry__input-password{
@@ -70,6 +75,7 @@
         text-decoration-skip-ink: none;
     }
 }
+
 
 .conf-password__text--false {
     padding: 10px;

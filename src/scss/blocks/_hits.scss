@@ -1,22 +1,119 @@
 .hits{
     padding: 30px 0 70px;
 
+    @include tablet(){
+        padding-bottom: 40px;
+    }
+
+    @include width900(){
+        padding-top: 0px;
+    }
+
+    @include tablet-s(){
+         padding-bottom: 0;   
+    }
+
     &__inner{
         padding-top: 27px;
         display: flex;
+
+        @include width470(){
+            padding-top: 20px;
+        }
     }
 
     &__product{
         padding: 20px;
         background-color: $colorWhite600;
+
+        @include tablet-s(){
+            padding: 0 10px 26px;
+        }
     }
 }
 
-.hits__product-top {
+.hits .container{
+    @include tablet-s(){
+        padding: 0;
+   }
+}
+
+.hits .subtitle{
+    @include tablet-s(){
+        padding: 0 10px;
+
+        span{
+            left: 10px;
+        }
+
+        &::before{
+            width: calc(100% - 55px);
+        }
+
+        &::after{
+            right: 10px;
+        }
+   }
+}
+
+.hits__product-top{
+    @include tablet-s(){
+        width: 380px;
+        height: 490px;
+
+        margin-bottom: 5px;
+    }
+
+    @include mobile(){
+        width: 330px;
+        height: 450px;
+    }
+}
+
+
+.hits__product-wrapper {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 20px;
+
+    @include width1200(){
+        justify-content: center;
+    }
+
+    @include width900(){
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    @include width770(){
+        gap: 20px;
+    }
+
+    @include tablet-s(){
+        flex-direction: unset;
+        flex-wrap: unset;
+        justify-content: unset;
+        gap: 0;
+    }
+}
+
+.hits__product-slide{
+    @include tablet-s(){
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+}
+
+.hits__product-pagination{
+    @include pagination-style
+}
+
+.hits__product-bottom{
+    @include tablet-s(){
+        padding: 0 10px;
+    }
 }
 
 .hits__product-tags {
@@ -24,6 +121,11 @@
     flex-wrap: wrap;
     gap: 20px 10px;
     margin-bottom: 20px;
+
+    @include width900(){
+        gap: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 .hits__product-see-all {
@@ -42,5 +144,10 @@
 
     &:hover{
         box-shadow: 0 5px 25px 0 rgba(51, 51, 63, 0.2);
+    }
+
+    @include mobile-x(){
+        font-weight: 400;
+        padding: 12px 14px;
     }
 }

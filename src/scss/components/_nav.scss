@@ -1,6 +1,14 @@
 .nav{
     margin-left: auto;
     margin-right: 78.5px;
+
+    @include width1100(){
+        margin: 0;
+    }
+
+    @include width900(){
+        display: none;
+    }
 }
 
 .nav__list{
@@ -9,6 +17,10 @@
     gap: 0 24px;
     font-size: 10px;
     text-transform: uppercase;
+
+    @include width1100(){
+        gap: 0 12px;
+    }
 }
 
 .nav__link{

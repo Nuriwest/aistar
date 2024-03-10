@@ -12,9 +12,21 @@
 
     padding: 41px 10px 56px;
     background-color: $colorWhite600;
+
+    @include width900(){
+        padding: 21px 10px 36px;
+    }
+
+    @include tablet-s(){
+        margin-top: 20px;
+    }
     
     &__inner {
         width: 400px;
+
+        @include mobile-x(){
+            width: 100%;
+        }
     }
 }
 
@@ -25,6 +37,15 @@
     font-weight: 800;
     font-size: 36px;
     text-align: center;
+
+    @include width900(){
+        margin-bottom: 15px;
+        font-size: 32px;
+    }
+
+    @include mobile-x(){
+        font-size: 27px;
+    }
 }
 
 .main-form__form {
@@ -33,6 +54,10 @@
 
     padding: 22px 30px;
     background-color: $colorWhite;
+
+    @include mobile-x(){
+        padding: 15px 20px;
+    }
 }
 
 .main-form__label {
@@ -47,6 +72,10 @@
     margin-top: 35px;
     font-weight: 400;
     font-size: 12px;  
+
+    @include mobile-x(){
+        margin-top: 15px;
+    }
     
     .main-form__signin-link {
         text-decoration: underline;

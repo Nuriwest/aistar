@@ -1,16 +1,30 @@
 <section class="hits">
   <div class="container">
+    @@include('./components/mini-nav.html')
+
     <h2 class="subtitle">Хиты продаж<span></span></h2>
     <div class="hits__inner">
       @@include('./components/tabs.html')
       <div class="hits__product">
         <div class="hits__product-top">
-          @@include('./components/product-card.html')
-          @@include('./components/product-card.html')
-          @@include('./components/product-card.html')
-          @@include('./components/product-card.html')
-          @@include('./components/product-card.html')
+          <div class="hits__product-wrapper">
+            <div class="hits__product-slide">
+              @@include('./components/product-card.html')
+            </div>
+            <div class="hits__product-slide">
+              @@include('./components/product-card.html')
+            </div>
+            <div class="hits__product-slide">
+              @@include('./components/product-card.html')
+            </div>
+            <div class="hits__product-slide">
+              @@include('./components/product-card.html')
+            </div>
+          </div>
+
+          <div class="hits__product-pagination swiper-pagination"></div>
         </div>
+
         <div class="hits__product-bottom">
           <div class="hits__product-tags">
             <button class="product-tag">Электроды сварочные</button>

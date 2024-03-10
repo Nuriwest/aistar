@@ -1,9 +1,64 @@
 .nova{
+    display: flex;
+    justify-content: center;
     margin-bottom: 67px;
-    position: relative;
-    
-    &__inner{
-        margin-top: 39px;
-        padding: 10px;
+
+    @include tablet(){
+        display: block;
+        margin-bottom: 40px;
     }
+
+    @include tablet-s(){
+        margin-bottom: 10px;
+    }
+}
+
+.nova__inner{
+    margin-top: 39px;
+    padding: 10px;
+
+    @include width1310(){
+        width: 1050px;
+        padding: 0;
+    }
+
+    @include width1100(){
+        width: 900px;
+    }
+    
+    @include tablet(){
+        width: 700px;
+    }
+
+    @include width770(){
+        width: 100%;
+    }
+
+    @include tablet-s(){
+        height: 490px;
+    }
+
+    @include width470(){
+        margin-top: 27px;
+        height: 480px;
+    }
+}
+
+.nova .container{
+    @include width1200(){
+        padding: 0;
+    }
+}
+
+.nova .swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+
+.nova .product-card{
+    height: 450px;
+}
+
+.nova__pagination{
+    @include pagination-style
 }

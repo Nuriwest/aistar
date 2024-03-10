@@ -5,6 +5,22 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         padding: 50px 0 80px;
+
+        @include width900(){
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 0;
+            padding-left: 100px;
+        }
+
+        @include tablet-s(){
+            padding-left: 0;
+        }
+
+        @include width470(){
+            grid-template-columns: 1fr;
+            gap: 0;
+            padding-bottom: 50px;
+        }
     }
 
     .footer__link{
@@ -15,7 +31,7 @@
         transition: all .2s ease-in;
 
         &--normal{
-            text-transform: unset   ;
+            text-transform: unset;
         }
 
         &:hover{
@@ -24,18 +40,67 @@
     }
 }
 
+.footer .container{
+    padding: 0 10px;
+}
+
+.footer__list{
+    @include width470(){
+        display: none;
+        padding-bottom: 13px;
+    }
+
+    &--active{
+        display: block;
+    }
+}
+
 .footer__list li{
     &:not(:last-child){
         margin-bottom: 16px;
     }
+
+    @include width470(){
+        margin-bottom: 13px;
+    }
 }
 
-.footer__text{
+.footer__acc-btn{
     margin-bottom: 22px;
     font-family: $fontThird;
     font-weight: 400;
     font-size: 10px;
     text-transform: uppercase;
     color: $colorGray500;
+
+    @include width470(){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 23px;
+
+        text-align: left;
+        font-size: 13px;
+
+        transition: all .2s ease-in;
+
+        &:hover{
+            color: $colorWhite
+        }
+    }
+
+    @include mobile(){
+        font-size: 10px;
+    }
 }
 
+.footer__acc-icon{
+    display: none;
+
+    &--rotate{
+        transform: rotate(180deg);
+    }
+}

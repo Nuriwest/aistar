@@ -1,0 +1,159 @@
+.cart{
+    padding: 23px 0 10px 10px;
+    background-color: $colorWhite600;
+
+    @include width900(){
+        display: none;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.cart__top {
+    position: relative;
+}
+
+.cart__title {
+    margin-top: 34px;
+    padding-bottom: 10px;
+    font-size: 36px;
+}
+
+.cart__progress {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+
+    font-family: $fontAccent;
+    font-weight: 400;
+    font-size: 16px;
+
+    &-placing{
+        width: 200px;
+        padding: 0 45px;  
+        color: $colorGray600;
+        background-color: #eceef3;
+    }
+}
+
+.cart__progress-formation{
+    position: relative;
+
+    width: 200px;
+    padding: 0 35px;
+    background-color: $colorWhite;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -14px;
+
+        width: 28px;
+        height: 28px;
+
+        background-color: $colorWhite;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+.cart__body {
+    margin-top: 33px;
+}
+
+.cart__descr-list {
+    display: flex;
+    gap: 0 10px;
+    margin-bottom: 8px;
+}
+
+.cart__descr-item {
+    font-weight: 400;
+    font-size: 12px;
+    color: $colorGray600;
+
+    &--1{
+        margin-left: 116px;
+        max-width: 267px;
+        width: 100%;
+    }
+
+    &--2{
+        max-width: 150px;
+        width: 100%;    
+    }
+
+    &--3{
+        max-width: 140px;
+        width: 100%;    
+    }
+
+    &--4{
+        max-width: 130px;
+        width: 100%;    
+    }
+
+    &--5{
+        max-width: 135px;
+        width: 100%;    
+    }
+
+    &--6{
+        max-width: 160px;
+        width: 100%;    
+    }
+}
+
+.cart__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;   
+}
+
+.cart__total {
+    display: flex;
+    flex-direction: column;
+    gap: 18px 0;
+
+    width: 370px;
+    margin: 53px 0 53px auto;
+}
+
+.cart__total-head {
+    padding: 21px 17px 19px;
+    background-color: $colorWhite;
+
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.cart__total-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 12px;
+    border-bottom: 0.80px dashed #e9ecf1;
+}
+
+.cart__price-box {
+    font-family: $fontAccent;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+.cart__total-registry {
+    display: inline-block;
+    margin-top: 10px;
+
+    border-bottom: 0.80px dashed $colorTextMain;
+    font-weight: 400;
+    text-transform: lowercase;
+}

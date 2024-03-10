@@ -1,0 +1,76 @@
+<section class="descr none">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a href="#!" class="breadcrumbs__to-home">
+          <img src="./img/icons/home.svg" alt="home icon" />
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#!" class="breadcrumbs__link">Категории</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#!" class="breadcrumbs__link">Сварочные материалы</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#!" class="breadcrumbs__link">Проволока сварочная</a>
+      </li>
+    </ul>
+
+    @@include('./html/components/descr-item.html')
+  </div>
+
+  <div class="descr__swiper-box">
+    <div class="outer-box">
+      <div class="container">
+        <h2 class="subtitle">Смотрите также <span></span></h2>
+        <div class="descr__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              @@include('./html/components/card-compare.html')
+            </div>
+            <div class="swiper-slide">
+              @@include('./html/components/card-compare.html')
+            </div>
+            <div class="swiper-slide">
+              @@include('./html/components/card-compare.html')
+            </div>
+            <div class="swiper-slide">
+              @@include('./html/components/card-compare.html')
+            </div>
+            <div class="swiper-slide">
+              @@include('./html/components/card-compare.html')
+            </div>
+          </div>
+
+          <div class="descr__pagination swiper-pagination"></div>
+        </div>
+      </div>
+
+      <button class="swiper-prev-btn descr__swiper-prev-btn">
+        <img src="./img/icons/arrow-left.svg" alt="arrow left" />
+      </button>
+      <button class="swiper-next-btn descr__swiper-next-btn">
+        <img src="./img/icons/arrow-right.svg" alt="arrow right" />
+      </button>
+    </div>
+  </div>
+
+  <div class="last-viewed">
+    <div class="container">
+      <h2 class="subtitle">Вы смотрели<span></span></h2>
+      <div class="last-viewed__swiper swiper">
+        <div class="swiper-wrapper last-viewed__swiper-wrapper">
+          <div class="swiper-slide last-viewed__slide">
+            @@include('./html/components/product-card.html')
+          </div>
+          <div class="swiper-slide last-viewed__slide">
+            @@include('./html/components/product-card.html')
+          </div>
+        </div>
+
+        <div class="last-viewed__pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

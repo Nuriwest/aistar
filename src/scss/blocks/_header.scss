@@ -1,11 +1,9 @@
-.block{
-    width: 100px;
-    height: 30px;
-    background-color: red;
-}
-
 .header__top{
     background-color: $colorWhite600;
+
+    @include tablet-s(){
+        background-color: $colorWhite;
+    }
 }
 
 .header__nav{
@@ -21,8 +19,20 @@
     align-items: center;
 }
 
+.mini-logo{
+    display: none;
+
+    @include tablet-s(){
+        display: inline-block;
+    }
+}
+
 .header__logo{
     margin: 22px 27px 22px 10px;
+
+    @include tablet-s(){
+        display: none;
+    }
 }
 
 .header__search{
@@ -30,6 +40,9 @@
     align-items: center;
     flex-basis: 870px;
 
+    @include tablet-s(){
+        margin-top: 5px;
+    }
 }
 
 .header__search-input{
@@ -47,6 +60,17 @@
         font-weight: 400;
         color: $colorGray600;
     }
+
+    @include tablet-s(){
+        padding-left: 0;
+        border-radius: 0px 8px 8px 0px;
+
+        &::placeholder{
+            font-family: $fontFourth;
+            font-size: 16px;
+            color: $colorBlack;
+        }
+    }
 }
 
 .header__search-btn{
@@ -59,4 +83,10 @@
 
     background-color: $colorGray400;
     border-radius: 0px 15px 15px 0px;
+
+    @include tablet-s(){
+        width: 45px;
+        order: -1;
+        border-radius: 8px 0px 0px 8px;
+    }
 }

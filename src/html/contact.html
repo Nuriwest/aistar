@@ -26,6 +26,7 @@
           class="contact__input-phone"
           placeholder="+7 (987) 060-21-03"
           required
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
         />
       </div>
       <div class="contact__data-mail">
@@ -55,10 +56,17 @@
         required
       />
 
-      <span class="contact__send-checkbox--style"></span>
+      <div class="contact__checkbox-custom-box">
+        <div class="contact__checkbox-custom"></div>
+        <img
+          class="contact__checkbox-checkmark none"
+          src="./img/icons/checkmark.svg"
+          alt="checkmark icon"
+        />
+      </div>
 
       <label for="contact-personal-data" class="contact__send-label"
-        >Даю согласие ООО «Компания Сварнов» на хранение и обработку
+        >Даю согласие «Компания Aistar» на хранение и обработку
         <span>персональных данных</span> и соглашаюсь с условиями их
         обработки</label
       >

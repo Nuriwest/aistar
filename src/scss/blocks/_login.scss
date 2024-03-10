@@ -11,6 +11,10 @@
     align-items: center;
     gap: 0 23px;
 
+    @include mobile-x(){
+        margin-top: 15px;
+    }
+
     .login__link{
         font-family: $fontAccent;
         font-weight: 400;

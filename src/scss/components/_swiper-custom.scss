@@ -13,10 +13,33 @@
 }
 
 .swiper-prev-btn{
-    transform: translateY(-510%) translateX(-180%);
+    left: 0;
+    transform: translateY(-510%);
+
+    @include tablet-s(){
+        display: none;
+    }
 }
 
 .swiper-next-btn{
     right: 0;
-    transform: translateY(-510%) translateX(-740%);
+    transform: translateY(-510%);
+
+    @include tablet-s(){
+        display: none;
+    }
+}
+
+.outer-box{
+    padding: 0 15px;
+    position: relative;
+
+    @include tablet(){
+        margin: 0 15px;
+    }
+
+    @include tablet-s(){
+        padding: 0;
+    }
+
 }

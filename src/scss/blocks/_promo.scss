@@ -1,32 +1,133 @@
 .promo{
     padding: 37px 0 42px;
 
-    &__inner{
-        display: grid;
-        grid-template-columns: 565px 570px;
-        grid-template-rows: 460px 315px;
-        gap: 20px 22px;
+    @include width900(){
+        padding: 25px 0 0px;
     }
 
-    &__descr-1{
-        position: absolute;
-        top: 65px;
-        left: 70px;
-        width: 400px;
-        color: $colorWhite;
-        font-family: $fontAccent;
-    }
-
-    &__descr-2{
-        position: absolute;
-        top: 35px;
-        left: 27px;
+    @include tablet-s(){
+        padding-top: 15px;
     }
 }
 
-.promo__block-1{
+.promo .container{
+    padding: 0;
+}
+
+.promo__inner{
+    @include width900(){
+        position: relative;
+        width: 100%;
+        height: 340px;
+    }
+
+    @include width830(){
+        margin-bottom: 10px;  
+    }
+
+    @include tablet-s(){
+        height: 460px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        left: 20px;
+        bottom: 35px;
+
+        @include tablet-s(){
+            left: 10px;
+            bottom: 78px;
+        }
+    }
+}
+
+.promo__swiper-wrapper{
+    display: grid;
+    grid-template-columns: 565px 570px;
+    grid-template-rows: 460px 315px;
+    gap: 20px 22px;
+
+    @include width1200(){
+        justify-content: center;
+        grid-template-columns: 495px 500px;
+        grid-template-rows: 390px 245px;
+    }
+
+    @include width1100(){
+        grid-template-columns: 445px 450px;
+        grid-template-rows: 360px 215px;
+    }
+
+    @include tablet(){
+        grid-template-columns: 405px 410px;
+        grid-template-rows: 330px 175px;
+    }
+
+    @include width900(){
+        display: flex;
+        justify-content: unset;
+        gap: 0;
+    }
+}
+
+.promo__swiper-pagination{
+    display: none;
+    position: absolute;
+    z-index: 700;
+
+    @include width900{
+        display: block;
+
+        .swiper-pagination-bullet{
+            width: 18px;
+            height: 18px;
+            background: transparent;
+
+            border: 1.5px solid #fff;
+            border-radius: 9px;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active{
+            background: $colorWhite;
+        }
+      
+    }
+}
+
+.promo__block--1{
     grid-column: span 2;
     position: relative;
+}
+
+.promo__descr-1{
+    position: absolute;
+    top: 65px;
+    left: 70px;
+    width: 400px;
+    color: $colorWhite;
+    font-family: $fontAccent;
+
+    @include width1100(){
+        top: 45px;
+        left: 50px;
+    }
+
+    @include tablet-s(){
+        top: 49.5px;
+        left: 10px;
+    }
+}
+
+.promo__img-1{
+    aspect-ratio: 1151 / 460;
+
+    @include width830(){
+        height: 400px;
+    }
+
+    @include tablet-s(){
+        height: 460px;
+    }
 }
 
 .promo__title-1{
@@ -35,6 +136,20 @@
     font-size: 42px;
     line-height: 95%;
     text-transform: uppercase;
+
+    @include width1100(){
+        margin-bottom: 13px;
+        font-size: 35px;
+    }
+
+    @include width830(){
+        font-size: 30px;
+    }
+
+    @include tablet-s(){
+        margin-bottom: 20px;
+        font-size: 42px;
+    }
 }
 
 .promo__text-1{
@@ -42,12 +157,33 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+
+    @include width1100(){
+        font-size: 14px;
+    }
+
+    @include tablet-s(){
+        font-size: 16px;
+    }
 }
 
-.promo__block-2{
+.promo__block--2{
     position: relative;
     display: flex;
     justify-content: flex-end;
+
+    border-radius: 3px;
+    box-shadow: $shadowBtn;
+
+    @include width1200(){
+        box-shadow: none;
+    }
+}
+
+.promo__descr-2{
+    position: absolute;
+    top: 35px;
+    left: 27px;
 }
 
 .promo__title-2{
@@ -56,6 +192,20 @@
     font-weight: 800;
     font-size: 44px;
     line-height: 109%;
+
+    @include width1100(){
+        margin-bottom: 10px;
+        font-size: 33px;
+    }
+
+    @include width900(){
+        font-size: 37px;
+        margin-bottom: 25px;
+    }
+
+    @include width830(){
+        font-size: 30px;
+    }
 }
 
 .promo__text-2{
@@ -63,4 +213,27 @@
     font-size: 12px;
     line-height: 150%;
     color: $colorGray600;
+
+    @include width900(){
+        width: 460px;
+        font-size: 18px;
+    }
+
+    @include width830(){
+        width: 350px;
+        font-size: 16px;
+    }
+}
+
+.promo__img-2{
+    aspect-ratio: 461 / 315;
+}
+
+.promo__img-3{
+    aspect-ratio: 570 / 320;
+
+    @include width900(){
+        width: 100%;
+        height: 100%;
+    }
 }
